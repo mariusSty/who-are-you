@@ -41,7 +41,7 @@ export function Text(props: TextProps) {
 
   return (
     <DefaultText
-      style={[{ color, fontFamily: "SpaceMono" }, style]}
+      style={[{ color, fontFamily: "SpaceMono", fontSize: 18 }, style]}
       {...otherProps}
     />
   );

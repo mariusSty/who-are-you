@@ -40,18 +40,18 @@ export default function Profile() {
 
 const styles = StyleSheet.create({
   quizResultItem: {
-    flexDirection: "row",
-    borderWidth: 2,
+    borderWidth: 1,
     borderRadius: 10,
     alignItems: "center",
     justifyContent: "space-between",
     padding: 20,
+    backgroundColor: "#E493B3",
   },
   quizResultItemTitleText: {
     fontSize: 14,
   },
   quizResultItemResultText: {
-    fontSize: 18,
+    fontSize: 24,
     fontWeight: "bold",
   },
 });

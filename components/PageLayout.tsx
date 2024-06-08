@@ -12,11 +12,7 @@ export default function PageLayout({ children, title }: PageLayoutProps) {
       <View style={styles.titleContainer}>
         <Text style={styles.titleText}>{title}</Text>
       </View>
-      <View
-        style={styles.separator}
-        lightColor="#eee"
-        darkColor="rgba(255,255,255,0.1)"
-      />
+      <View style={styles.separator} lightColor="#8E7AB5" darkColor="#EEA5A6" />
       <ScrollView style={styles.contentScrollView}>
         <View style={styles.content}>{children}</View>
       </ScrollView>

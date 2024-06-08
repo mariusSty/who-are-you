@@ -1,9 +1,10 @@
+import Button from "@/components/Button";
 import PageLayout from "@/components/PageLayout";
 import { Text, View } from "@/components/Themed";
 import quizDatas from "@/constants/data.json";
 import { Redirect, router, useGlobalSearchParams } from "expo-router";
 import * as SecureStore from "expo-secure-store";
-import { Pressable, StyleSheet } from "react-native";
+import { StyleSheet } from "react-native";
 
 export default function Question() {
   const { slug, id } = useGlobalSearchParams();
@@ -34,13 +35,9 @@ export default function Question() {
     <PageLayout title={question.label}>
       <View style={styles.answersContainer}>
         {question.answers.map((answer, index) => (
-          <Pressable
-            key={index}
-            style={styles.answerButton}
-            onPress={handleClickAnswer}
-          >
-            <Text style={styles.answerButtonText}>{answer}</Text>
-          </Pressable>
+          <Button key={index} onPress={handleClickAnswer}>
+            <Text>{answer}</Text>
+          </Button>
         ))}
       </View>
     </PageLayout>
@@ -62,16 +59,5 @@ const styles = StyleSheet.create({
     gap: 15,
     alignItems: "stretch",
     justifyContent: "center",
-  },
-  answerButton: {
-    flexDirection: "row",
-    borderWidth: 2,
-    borderRadius: 10,
-    alignItems: "center",
-    justifyContent: "center",
-    padding: 20,
-  },
-  answerButtonText: {
-    fontSize: 18,
   },
 });
