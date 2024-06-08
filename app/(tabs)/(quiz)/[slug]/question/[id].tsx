@@ -1,6 +1,7 @@
 import { Text, View } from "@/components/Themed";
 import quizDatas from "@/constants/data.json";
-import { Link, Redirect, useGlobalSearchParams } from "expo-router";
+import { Redirect, router, useGlobalSearchParams } from "expo-router";
+import * as SecureStore from "expo-secure-store";
 import { Pressable, StyleSheet } from "react-native";
 
 export default function Question() {
@@ -15,20 +16,30 @@ export default function Question() {
     return <Redirect href="/" />;
   }
 
-  const nextRoute =
-    questions.length === +id
-      ? `/${slug}/result`
-      : `/${slug}/question/${+id + 1}`;
+  const handleClickAnswer = async () => {
+    const nextRoute =
+      questions.length === +id
+        ? `/${slug}/result`
+        : `/${slug}/question/${+id + 1}`;
+
+    const results = quizDatas.find((quiz) => quiz.slug === slug)?.results || [];
+    const result = results[Math.floor(Math.random() * results.length)];
+
+    if (slug) await SecureStore.setItemAsync(slug.toString(), result.label);
+    router.push({ pathname: nextRoute, params: { result: result.label } });
+  };
 
   return (
     <View style={styles.container}>
       <Text style={styles.question}>{question.label}</Text>
       <View style={styles.answersContainer}>
         {question.answers.map((answer, index) => (
-          <Pressable key={index} style={styles.answerButton}>
-            <Link href={nextRoute} asChild>
-              <Text style={styles.answerButtonText}>{answer}</Text>
-            </Link>
+          <Pressable
+            key={index}
+            style={styles.answerButton}
+            onPress={handleClickAnswer}
+          >
+            <Text style={styles.answerButtonText}>{answer}</Text>
           </Pressable>
         ))}
       </View>
