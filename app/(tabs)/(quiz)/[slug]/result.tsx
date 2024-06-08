@@ -1,3 +1,4 @@
+import PageLayout from "@/components/PageLayout";
 import { Text, View } from "@/components/Themed";
 import quizData from "@/constants/data.json";
 import { Link, Redirect, useLocalSearchParams } from "expo-router";
@@ -13,9 +14,7 @@ export default function Result() {
   }
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Résultat :</Text>
-      <Text style={styles.text}>{resultLabel}</Text>
+    <PageLayout title={resultLabel?.toString() || ""}>
       <View style={styles.descriptionContainer}>
         <Text style={styles.text}>{result.description}</Text>
       </View>
@@ -24,25 +23,14 @@ export default function Result() {
           <Text style={styles.text}>Faire un autre test</Text>
         </Link>
       </Pressable>
-    </View>
+    </PageLayout>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-    gap: 20,
-  },
   descriptionContainer: {
-    width: "80%",
     alignItems: "center",
     justifyContent: "center",
-  },
-  title: {
-    fontSize: 20,
-    fontWeight: "bold",
   },
   text: {
     fontSize: 18,

@@ -1,3 +1,4 @@
+import PageLayout from "@/components/PageLayout";
 import { Text, View } from "@/components/Themed";
 import quizDatas from "@/constants/data.json";
 import { Redirect, router, useGlobalSearchParams } from "expo-router";
@@ -30,8 +31,7 @@ export default function Question() {
   };
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.question}>{question.label}</Text>
+    <PageLayout title={question.label}>
       <View style={styles.answersContainer}>
         {question.answers.map((answer, index) => (
           <Pressable
@@ -43,7 +43,7 @@ export default function Question() {
           </Pressable>
         ))}
       </View>
-    </View>
+    </PageLayout>
   );
 }
 
@@ -60,7 +60,6 @@ const styles = StyleSheet.create({
   },
   answersContainer: {
     gap: 15,
-    width: "80%",
     alignItems: "stretch",
     justifyContent: "center",
   },
