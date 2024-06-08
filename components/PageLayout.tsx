@@ -25,12 +25,13 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "flex-start",
-    padding: 50,
     gap: 30,
   },
   titleContainer: {
     alignItems: "center",
     justifyContent: "center",
+    width: "80%",
+    marginTop: 50,
   },
   titleText: {
     fontSize: 30,
@@ -38,13 +39,14 @@ const styles = StyleSheet.create({
   },
   separator: {
     height: 1,
-    width: "100%",
+    width: "80%",
   },
   contentScrollView: {
     flex: 1,
     width: "100%",
   },
   content: {
+    paddingHorizontal: 50,
     gap: 20,
   },
 });
