@@ -22,6 +22,9 @@ export default function Result() {
       <Button link="/">
         <Text>Faire un autre test</Text>
       </Button>
+      <Button link="/profile">
+        <Text>Voir votre profil</Text>
+      </Button>
     </PageLayout>
   );
 }
