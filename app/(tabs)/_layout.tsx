@@ -27,7 +27,7 @@ export default function TabLayout() {
       }}
     >
       <Tabs.Screen
-        name="(quiz)/index"
+        name="(quiz)"
         options={{
           tabBarIcon: ({ color }) => <TabBarIcon name="book" color={color} />,
         }}
@@ -37,24 +37,6 @@ export default function TabLayout() {
         options={{
           title: "Profil",
           tabBarIcon: ({ color }) => <TabBarIcon name="user" color={color} />,
-        }}
-      />
-      <Tabs.Screen
-        name="(quiz)/[slug]/question/[id]"
-        options={{
-          href: null,
-        }}
-      />
-      <Tabs.Screen
-        name="(quiz)/[slug]/index"
-        options={{
-          href: null,
-        }}
-      />
-      <Tabs.Screen
-        name="(quiz)/[slug]/result"
-        options={{
-          href: null,
         }}
       />
     </Tabs>
