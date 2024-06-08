@@ -1,0 +1,135 @@
+[
+  {
+    "title": "Pokemon",
+    "slug": "pokemon",
+    "label": "Quel pokémon est-tu ?",
+    "questions": [
+      {
+        "label:": "Quel est ton type de pokémon préféré ?",
+        "answers:": ["Eau", "Feu", "Plante", "Electrique"]
+      },
+      {
+        "label:": "Quel est ton pokémon légendaire préféré ?",
+        "answers:": ["Mewtwo", "Rayquaza", "Groudon", "Kyogre"]
+      },
+      {
+        "label:": "Quel est ton pokémon de départ préféré ?",
+        "answers:": ["Bulbizarre", "Salamèche", "Carapuce", "Pikachu"]
+      },
+      {
+        "label:": "Quel est ta région préférée ?",
+        "answers:": ["Kanto", "Johto", "Hoenn", "Sinnoh"]
+      }
+    ],
+    "results": [
+      {
+        "label": "Bulbizarre",
+        "description": "Tu es Bulbizarre, tu es un pokémon de type plante. Tu es un pokémon très calme et posé, tu es très attaché à la nature et tu aimes te reposer dans les forêts."
+      },
+      {
+        "label": "Salamèche",
+        "description": "Tu es Salamèche, tu es un pokémon de type feu. Tu es un pokémon très dynamique et tu aimes te battre. Tu es très courageux et tu n'as pas peur de te lancer dans des aventures."
+      },
+      {
+        "label": "Carapuce",
+        "description": "Tu es Carapuce, tu es un pokémon de type eau. Tu es un pokémon très calme et posé, tu aimes te reposer au bord de l'eau et te baigner. Tu es très attaché à tes amis et tu es toujours prêt à les aider."
+      },
+      {
+        "label": "Pikachu",
+        "description": "Tu es Pikachu, tu es un pokémon de type électrique. Tu es un pokémon très malin et tu aimes jouer des tours à tes amis. Tu es très attaché à ta liberté et tu n'aimes pas qu'on te donne des ordres."
+      }
+    ]
+  },
+  {
+    "title": "Harry Potter",
+    "slug": "harry-potter",
+    "label": "Quel personnage d'Harry Potter es-tu ?",
+    "questions": [
+      {
+        "label:": "Quelle est ta maison préférée ?",
+        "answers:": ["Gryffondor", "Serdaigle", "Poufsouffle", "Serpentard"]
+      },
+      {
+        "label:": "Quel est ton personnage préféré ?",
+        "answers:": [
+          "Harry Potter",
+          "Hermione Granger",
+          "Ron Weasley",
+          "Draco Malfoy"
+        ]
+      },
+      {
+        "label:": "Quel est ton sortilège préféré ?",
+        "answers:": ["Expelliarmus", "Patronus", "Avada Kedavra", "Accio"]
+      },
+      {
+        "label:": "Quel est ton animal préféré ?",
+        "answers:": ["Hibou", "Chat", "Rat", "Chouette"]
+      }
+    ],
+    "results": [
+      {
+        "label": "Harry Potter",
+        "description": "Tu es Harry Potter, tu es un sorcier très courageux et tu n'as pas peur de te lancer dans des aventures. Tu es très attaché à tes amis et tu es prêt à tout pour les protéger."
+      },
+      {
+        "label": "Hermione Granger",
+        "description": "Tu es Hermione Granger, tu es une sorcière très intelligente et tu aimes apprendre de nouvelles choses. Tu es très courageuse et tu n'as pas peur de te battre pour ce en quoi tu crois."
+      },
+      {
+        "label": "Ron Weasley",
+        "description": "Tu es Ron Weasley, tu es un sorcier très loyal et tu es toujours prêt à aider tes amis. Tu es très courageux et tu n'as pas peur de te lancer dans des aventures."
+      },
+      {
+        "label": "Draco Malfoy",
+        "description": "Tu es Draco Malfoy, tu es un sorcier très ambitieux et tu es prêt à tout pour arriver à tes fins. Tu es très courageux et tu n'as pas peur de te battre pour ce en quoi tu crois."
+      }
+    ]
+  },
+  {
+    "title": "Star Wars",
+    "slug": "star-wars",
+    "label": "Quel personnage de Star Wars es-tu ?",
+    "questions": [
+      {
+        "label:": "Quelle est ta faction préférée ?",
+        "answers:": ["République", "Empire", "Résistance", "Premier Ordre"]
+      },
+      {
+        "label:": "Quel est ton personnage préféré ?",
+        "answers:": ["Luke Skywalker", "Dark Vador", "Leia Organa", "Kylo Ren"]
+      },
+      {
+        "label:": "Quel est ton vaisseau préféré ?",
+        "answers:": [
+          "Faucon Millenium",
+          "X-Wing",
+          "TIE Fighter",
+          "Destroyer Stellaire"
+        ]
+      },
+      {
+        "label:": "Quel est ton droïde préféré ?",
+        "answers:": ["R2-D2", "C-3PO", "BB-8", "K-2SO"]
+      }
+    ],
+    "results": [
+      {
+        "label": "Luke Skywalker",
+        "description": "Tu es Luke Skywalker, tu es un Jedi très courageux et tu n'as pas peur de te lancer dans des aventures. Tu es très attaché à tes amis et tu es prêt à tout pour les protéger."
+      },
+      {
+        "label": "Dark Vador",
+        "description": "Tu es Dark Vador, tu es un Sith très puissant et tu es prêt à tout pour arriver à tes fins. Tu es très courageux et tu n'as pas peur de te battre pour ce en quoi tu crois."
+      },
+      {
+        "label": "Leia Organa",
+        "description": "Tu es Leia Organa, tu es une princesse très courageuse et tu n'as pas peur de te battre pour ce en quoi tu crois. Tu es très attachée à tes amis et tu es prête à tout pour les protéger."
+      },
+      {
+        "label": "Kylo Ren",
+        "description": "Tu es Kylo Ren, tu es un Sith très puissant et tu es prêt à tout pour arriver à tes fins. Tu es très courageux et tu n'as pas peur de te battre pour ce en quoi tu crois."
+      }
+    ]
+  }
+]
