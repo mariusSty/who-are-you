@@ -2,8 +2,7 @@ import FontAwesome from "@expo/vector-icons/FontAwesome";
 import { Tabs } from "expo-router";
 import React from "react";
 
-import { useColorScheme } from "@/components/useColorScheme";
-import Colors from "@/constants/Colors";
+import { pastelColors } from "@/constants/Colors";
 
 // You can explore the built-in icon families and icons on the web at https://icons.expo.fyi/
 function TabBarIcon(props: {
@@ -14,14 +13,9 @@ function TabBarIcon(props: {
 }
 
 export default function TabLayout() {
-  const colorScheme = useColorScheme();
-
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? "light"].tint,
-        // Disable the static render of the header on web
-        // to prevent a hydration error in React Navigation v6.
         headerShown: false,
         tabBarShowLabel: false,
       }}
@@ -30,6 +24,7 @@ export default function TabLayout() {
         name="(quiz)"
         options={{
           tabBarIcon: ({ color }) => <TabBarIcon name="book" color={color} />,
+          tabBarActiveTintColor: pastelColors[0],
         }}
       />
       <Tabs.Screen
@@ -37,6 +32,7 @@ export default function TabLayout() {
         options={{
           title: "Profil",
           tabBarIcon: ({ color }) => <TabBarIcon name="user" color={color} />,
+          tabBarActiveTintColor: pastelColors[3],
         }}
       />
     </Tabs>

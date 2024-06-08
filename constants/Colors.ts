@@ -1,5 +1,7 @@
-const tintColorLight = "#8E7AB5";
-const tintColorDark = "#EEA5A6";
+export const pastelColors = ["#8E7AB5", "#B784B7", "#E493B3", "#EEA5A6"];
+
+const tintColorLight = pastelColors[0];
+const tintColorDark = pastelColors[3];
 
 export default {
   light: {
