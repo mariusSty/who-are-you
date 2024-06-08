@@ -1,6 +1,7 @@
 import PageLayout from "@/components/PageLayout";
 import { Text, View } from "@/components/Themed";
-import quizDatas from "@/constants/data.json";
+import quizDatas from "@/constants/data";
+import { Image } from "expo-image";
 import * as SecureStore from "expo-secure-store";
 import { useCallback, useEffect, useState } from "react";
 import { StyleSheet } from "react-native";
@@ -27,10 +28,11 @@ export default function Profile() {
     <PageLayout title="Profil">
       {quizDatas.map((quizData) => (
         <View key={quizData.slug} style={styles.quizResultItem}>
+          <Image style={{ width: 40, height: 40 }} source={quizData.src} />
           <Text style={styles.quizResultItemTitleText}>{quizData.title}</Text>
           <Text style={styles.quizResultItemResultText}>
             {quizResults.find((result) => result.slug === quizData.slug)
-              ?.result || "Test non effectué"}
+              ?.result || "???"}
           </Text>
         </View>
       ))}

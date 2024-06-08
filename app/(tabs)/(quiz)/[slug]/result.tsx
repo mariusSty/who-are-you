@@ -1,7 +1,7 @@
 import Button from "@/components/Button";
 import PageLayout from "@/components/PageLayout";
 import { Text, View } from "@/components/Themed";
-import quizData from "@/constants/data.json";
+import quizData from "@/constants/data";
 import { Redirect, useLocalSearchParams } from "expo-router";
 import { StyleSheet } from "react-native";
 
