@@ -1,6 +1,7 @@
 import { Text, View } from "@/components/Themed";
 import quizDatas from "@/constants/data.json";
-import { StyleSheet } from "react-native";
+import { Link } from "expo-router";
+import { Pressable, StyleSheet } from "react-native";
 
 export default function Quiz() {
   return (
@@ -14,7 +15,11 @@ export default function Quiz() {
       <View style={styles.quizContainer}>
         {quizDatas.map((quizData) => (
           <View key={quizData.slug} style={styles.quizButton}>
-            <Text style={styles.quizButtonText}>{quizData.title}</Text>
+            <Link href={`/${quizData.slug}`} asChild>
+              <Pressable>
+                <Text style={styles.quizButtonText}>{quizData.title}</Text>
+              </Pressable>
+            </Link>
           </View>
         ))}
       </View>

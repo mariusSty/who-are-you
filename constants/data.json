@@ -3,22 +3,27 @@
     "title": "Pokemon",
     "slug": "pokemon",
     "label": "Quel pokémon est-tu ?",
+    "description": "Découvre quel pokémon tu es en répondant à ces questions !",
     "questions": [
       {
-        "label:": "Quel est ton type de pokémon préféré ?",
-        "answers:": ["Eau", "Feu", "Plante", "Electrique"]
+        "id": 1,
+        "label": "Quel est ton type de pokémon préféré ?",
+        "answers": ["Eau", "Feu", "Plante", "Electrique"]
       },
       {
-        "label:": "Quel est ton pokémon légendaire préféré ?",
-        "answers:": ["Mewtwo", "Rayquaza", "Groudon", "Kyogre"]
+        "id": 2,
+        "label": "Quel est ton pokémon légendaire préféré ?",
+        "answers": ["Mewtwo", "Rayquaza", "Groudon", "Kyogre"]
       },
       {
-        "label:": "Quel est ton pokémon de départ préféré ?",
-        "answers:": ["Bulbizarre", "Salamèche", "Carapuce", "Pikachu"]
+        "id": 3,
+        "label": "Quel est ton pokémon de départ préféré ?",
+        "answers": ["Bulbizarre", "Salamèche", "Carapuce", "Pikachu"]
       },
       {
-        "label:": "Quel est ta région préférée ?",
-        "answers:": ["Kanto", "Johto", "Hoenn", "Sinnoh"]
+        "id": 4,
+        "label": "Quel est ta région préférée ?",
+        "answers": ["Kanto", "Johto", "Hoenn", "Sinnoh"]
       }
     ],
     "results": [
@@ -44,14 +49,17 @@
     "title": "Harry Potter",
     "slug": "harry-potter",
     "label": "Quel personnage d'Harry Potter es-tu ?",
+    "description": "Découvre quel personnage d'Harry Potter tu es en répondant à ces questions !",
     "questions": [
       {
-        "label:": "Quelle est ta maison préférée ?",
-        "answers:": ["Gryffondor", "Serdaigle", "Poufsouffle", "Serpentard"]
+        "id": 1,
+        "label": "Quelle est ta maison préférée ?",
+        "answers": ["Gryffondor", "Serdaigle", "Poufsouffle", "Serpentard"]
       },
       {
-        "label:": "Quel est ton personnage préféré ?",
-        "answers:": [
+        "id": 2,
+        "label": "Quel est ton personnage préféré ?",
+        "answers": [
           "Harry Potter",
           "Hermione Granger",
           "Ron Weasley",
@@ -59,12 +67,14 @@
         ]
       },
       {
-        "label:": "Quel est ton sortilège préféré ?",
-        "answers:": ["Expelliarmus", "Patronus", "Avada Kedavra", "Accio"]
+        "id": 3,
+        "label": "Quel est ton sortilège préféré ?",
+        "answers": ["Expelliarmus", "Patronus", "Avada Kedavra", "Accio"]
       },
       {
-        "label:": "Quel est ton animal préféré ?",
-        "answers:": ["Hibou", "Chat", "Rat", "Chouette"]
+        "id": 4,
+        "label": "Quel est ton animal préféré ?",
+        "answers": ["Hibou", "Chat", "Rat", "Chouette"]
       }
     ],
     "results": [
@@ -90,18 +100,22 @@
     "title": "Star Wars",
     "slug": "star-wars",
     "label": "Quel personnage de Star Wars es-tu ?",
+    "description": "Découvre quel personnage de Star Wars tu es en répondant à ces questions !",
     "questions": [
       {
-        "label:": "Quelle est ta faction préférée ?",
-        "answers:": ["République", "Empire", "Résistance", "Premier Ordre"]
+        "id": 1,
+        "label": "Quelle est ta faction préférée ?",
+        "answers": ["République", "Empire", "Résistance", "Premier Ordre"]
       },
       {
-        "label:": "Quel est ton personnage préféré ?",
-        "answers:": ["Luke Skywalker", "Dark Vador", "Leia Organa", "Kylo Ren"]
+        "id": 2,
+        "label": "Quel est ton personnage préféré ?",
+        "answers": ["Luke Skywalker", "Dark Vador", "Leia Organa", "Kylo Ren"]
       },
       {
-        "label:": "Quel est ton vaisseau préféré ?",
-        "answers:": [
+        "id": 3,
+        "label": "Quel est ton vaisseau préféré ?",
+        "answers": [
           "Faucon Millenium",
           "X-Wing",
           "TIE Fighter",
@@ -109,8 +123,9 @@
         ]
       },
       {
-        "label:": "Quel est ton droïde préféré ?",
-        "answers:": ["R2-D2", "C-3PO", "BB-8", "K-2SO"]
+        "id": 4,
+        "label": "Quel est ton droïde préféré ?",
+        "answers": ["R2-D2", "C-3PO", "BB-8", "K-2SO"]
       }
     ],
     "results": [
