@@ -40,6 +40,18 @@ export default function TabLayout() {
           tabBarIcon: ({ color }) => <TabBarIcon name="user" color={color} />,
         }}
       />
+      <Tabs.Screen
+        name="(quiz)/[slug]/question/[id]"
+        options={{
+          href: null,
+        }}
+      />
+      <Tabs.Screen
+        name="(quiz)/[slug]/index"
+        options={{
+          href: null,
+        }}
+      />
     </Tabs>
   );
 }
