@@ -5,15 +5,20 @@ import { Pressable, StyleSheet } from "react-native";
 
 export default function Question() {
   const { slug, id } = useGlobalSearchParams();
+  const questions =
+    quizDatas.find((quiz) => quiz.slug === slug)?.questions || [];
   const question = id
-    ? quizDatas
-        .find((quiz) => quiz.slug === slug)
-        ?.questions.find((question) => question.id === +id)
+    ? questions.find((question) => question.id === +id)
     : null;
 
   if (!question || !id) {
     return <Redirect href="/" />;
   }
+
+  const nextRoute =
+    questions.length === +id
+      ? `/${slug}/result`
+      : `/${slug}/question/${+id + 1}`;
 
   return (
     <View style={styles.container}>
@@ -21,7 +26,7 @@ export default function Question() {
       <View style={styles.answersContainer}>
         {question.answers.map((answer, index) => (
           <Pressable key={index} style={styles.answerButton}>
-            <Link href={`/${slug}/question/${+id + 1}`} asChild>
+            <Link href={nextRoute} asChild>
               <Text style={styles.answerButtonText}>{answer}</Text>
             </Link>
           </Pressable>
