@@ -19,7 +19,7 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#8E7AB5"
       },
       "package": "com.mariussty.whoareyou"
     },
@@ -28,11 +28,7 @@
       "output": "static",
       "favicon": "./assets/images/favicon.png"
     },
-    "plugins": [
-      "expo-router",
-      "expo-secure-store",
-      "expo-asset"
-    ],
+    "plugins": ["expo-router", "expo-secure-store", "expo-asset"],
     "experiments": {
       "typedRoutes": true
     },
