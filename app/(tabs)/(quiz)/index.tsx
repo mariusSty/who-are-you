@@ -1,6 +1,7 @@
 import Button from "@/components/Button";
 import PageLayout from "@/components/PageLayout";
 import { Text, View } from "@/components/Themed";
+import { pastelColors } from "@/constants/Colors";
 import quizDatas from "@/constants/data";
 import { Image } from "expo-image";
 import { StyleSheet } from "react-native";
@@ -9,7 +10,11 @@ export default function Quiz() {
   return (
     <PageLayout title="Quiz">
       {quizDatas.map((quizData) => (
-        <Button key={quizData.slug} link={`/${quizData.slug}`}>
+        <Button
+          key={quizData.slug}
+          link={`/${quizData.slug}`}
+          color={pastelColors[0]}
+        >
           <View style={styles.button}>
             <Image style={{ width: 40, height: 40 }} source={quizData.src} />
             <Text style={styles.quizButtonText}>{quizData.title}</Text>
