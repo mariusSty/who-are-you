@@ -12,7 +12,7 @@ export default function PageLayout({ children, title }: PageLayoutProps) {
       <View style={styles.titleContainer}>
         <Text style={styles.titleText}>{title}</Text>
       </View>
-      <View style={styles.separator} lightColor="#8E7AB5" darkColor="#EEA5A6" />
+      <View style={styles.separator} />
       <ScrollView style={styles.contentScrollView}>
         <View style={styles.content}>{children}</View>
       </ScrollView>
@@ -40,6 +40,7 @@ const styles = StyleSheet.create({
   separator: {
     height: 1,
     width: "80%",
+    backgroundColor: "#000",
   },
   contentScrollView: {
     flex: 1,
@@ -47,6 +48,7 @@ const styles = StyleSheet.create({
   },
   content: {
     paddingHorizontal: 50,
+    paddingBottom: 30,
     gap: 20,
   },
 });

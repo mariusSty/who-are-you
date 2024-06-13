@@ -1,5 +1,6 @@
 import PageLayout from "@/components/PageLayout";
 import { Text, View } from "@/components/Themed";
+import { pastelColors } from "@/constants/Colors";
 import quizDatas from "@/constants/data";
 import { Image } from "expo-image";
 import * as SecureStore from "expo-secure-store";
@@ -28,12 +29,16 @@ export default function Profile() {
     <PageLayout title="Profil">
       {quizDatas.map((quizData) => (
         <View key={quizData.slug} style={styles.quizResultItem}>
-          <Image style={{ width: 40, height: 40 }} source={quizData.src} />
-          <Text style={styles.quizResultItemTitleText}>{quizData.title}</Text>
-          <Text style={styles.quizResultItemResultText}>
-            {quizResults.find((result) => result.slug === quizData.slug)
-              ?.result || "???"}
-          </Text>
+          <View style={styles.quizResultItemCategory}>
+            <Image style={styles.quizResultImage} source={quizData.src} />
+            <Text style={styles.quizResultItemTitleText}>{quizData.title}</Text>
+          </View>
+          <View style={styles.quizResultItemTextContainer}>
+            <Text style={styles.quizResultItemResultText}>
+              {quizResults.find((result) => result.slug === quizData.slug)
+                ?.result || "???"}
+            </Text>
+          </View>
         </View>
       ))}
     </PageLayout>
@@ -42,18 +47,40 @@ export default function Profile() {
 
 const styles = StyleSheet.create({
   quizResultItem: {
+    flexDirection: "row",
     borderWidth: 1,
+    borderColor: "black",
     borderRadius: 10,
     alignItems: "center",
-    justifyContent: "space-between",
-    padding: 20,
-    backgroundColor: "#E493B3",
+    height: 120,
+  },
+  quizResultItemCategory: {
+    backgroundColor: pastelColors[3],
+    justifyContent: "center",
+    alignItems: "center",
+    width: 120,
+    borderRightWidth: 1,
+    height: "100%",
+    borderTopLeftRadius: 10,
+    borderBottomLeftRadius: 10,
+    paddingHorizontal: 10,
+    gap: 6,
+  },
+  quizResultImage: {
+    width: 40,
+    height: 40,
+  },
+  quizResultItemTextContainer: {
+    padding: 10,
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
   },
   quizResultItemTitleText: {
-    fontSize: 14,
+    fontSize: 12,
   },
   quizResultItemResultText: {
-    fontSize: 24,
-    fontWeight: "bold",
+    fontSize: 18,
+    fontWeight: "black",
   },
 });
