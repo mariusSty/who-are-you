@@ -28,7 +28,11 @@
       "output": "static",
       "favicon": "./assets/images/favicon.png"
     },
-    "plugins": ["expo-router", "expo-secure-store", "expo-asset"],
+    "plugins": [
+      "expo-router",
+      "expo-secure-store",
+      "expo-asset"
+    ],
     "experiments": {
       "typedRoutes": true
     },
@@ -39,6 +43,12 @@
       "eas": {
         "projectId": "1e8c3509-d330-49e9-b58b-0f20f4087ad2"
       }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/1e8c3509-d330-49e9-b58b-0f20f4087ad2"
     }
   }
 }
