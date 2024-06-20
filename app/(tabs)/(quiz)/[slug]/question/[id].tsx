@@ -2,34 +2,45 @@ import Button from "@/components/Button";
 import PageLayout from "@/components/PageLayout";
 import { Text, View } from "@/components/Themed";
 import { pastelColors } from "@/constants/Colors";
-import quizDatas from "@/constants/data";
-import { Redirect, router, useGlobalSearchParams } from "expo-router";
+import {
+  calculateQuizResult,
+  getQuestionById,
+  getQuestionsBySlug,
+  getScore,
+} from "@/lib/quiz";
+import { Redirect, router, useLocalSearchParams } from "expo-router";
 import * as SecureStore from "expo-secure-store";
 import { StyleSheet } from "react-native";
 
 export default function Question() {
-  const { slug, id } = useGlobalSearchParams();
-  const questions =
-    quizDatas.find((quiz) => quiz.slug === slug)?.questions || [];
-  const question = id
-    ? questions.find((question) => question.id === +id)
-    : null;
+  const { slug, id, result } = useLocalSearchParams();
 
-  if (!question || !id) {
+  const questions = getQuestionsBySlug(slug?.toString());
+  const question = id ? getQuestionById(questions, +id) : null;
+
+  if (!question || !id || !slug) {
     return <Redirect href="/" />;
   }
 
-  const handleClickAnswer = async () => {
-    const nextRoute =
-      questions.length === +id
-        ? `/${slug}/result`
-        : `/${slug}/question/${+id + 1}`;
-
-    const results = quizDatas.find((quiz) => quiz.slug === slug)?.results || [];
-    const result = results[Math.floor(Math.random() * results.length)];
-
-    if (slug) await SecureStore.setItemAsync(slug.toString(), result.label);
-    router.push({ pathname: nextRoute, params: { result: result.label } });
+  const handleClickAnswer = async (index: number) => {
+    if (questions.length === +id && result) {
+      const scores = getScore(
+        slug.toString(),
+        result.toString().concat(`,${index}`)
+      );
+      const quizResults =
+        calculateQuizResult(slug?.toString() || "", scores)?.label || "";
+      SecureStore.setItem(slug.toString(), quizResults);
+      router.push({
+        pathname: `/${slug}/result`,
+        params: { result: quizResults },
+      });
+    } else {
+      router.push({
+        pathname: `/${slug}/question/${+id + 1}`,
+        params: { result: result ? result.concat(`,${index}`) : index },
+      });
+    }
   };
 
   return (
@@ -38,10 +49,10 @@ export default function Question() {
         {question.answers.map((answer, index) => (
           <Button
             key={index}
-            onPress={handleClickAnswer}
+            onPress={() => handleClickAnswer(index)}
             color={pastelColors[index]}
           >
-            <Text>{answer}</Text>
+            <Text>{answer.label}</Text>
           </Button>
         ))}
       </View>

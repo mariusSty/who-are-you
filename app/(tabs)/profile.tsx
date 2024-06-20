@@ -3,27 +3,45 @@ import { Text, View } from "@/components/Themed";
 import { pastelColors } from "@/constants/Colors";
 import quizDatas from "@/constants/data";
 import { Image } from "expo-image";
+import { useFocusEffect } from "expo-router";
 import * as SecureStore from "expo-secure-store";
-import { useCallback, useEffect, useState } from "react";
-import { StyleSheet } from "react-native";
+import { useCallback, useState } from "react";
+import { ActivityIndicator, StyleSheet } from "react-native";
 
 export default function Profile() {
   const [quizResults, setQuizResults] = useState<
     Array<{ slug: string; result: string | null }>
   >([]);
+  const [isLoading, setIsLoading] = useState(true);
 
-  const getResults = useCallback(async () => {
-    const results: Array<{ slug: string; result: string | null }> = [];
-    for (const quiz of quizDatas) {
-      const quizResult = await SecureStore.getItemAsync(quiz.slug);
-      results.push({ slug: quiz.slug, result: quizResult });
-    }
-    setQuizResults(results);
-  }, []);
+  useFocusEffect(
+    useCallback(() => {
+      let isActive = true;
 
-  useEffect(() => {
-    getResults();
-  }, [getResults]);
+      const getResults = async () => {
+        const results: Array<{ slug: string; result: string | null }> = [];
+        for (const quiz of quizDatas) {
+          const quizResult = await SecureStore.getItemAsync(quiz.slug);
+          results.push({ slug: quiz.slug, result: quizResult });
+        }
+        setQuizResults(results);
+        setIsLoading(false);
+      };
+
+      getResults();
+
+      return () => {
+        isActive = false;
+      };
+    }, [])
+  );
+
+  if (isLoading)
+    return (
+      <PageLayout title="Profil">
+        <ActivityIndicator />
+      </PageLayout>
+    );
 
   return (
     <PageLayout title="Profil">
