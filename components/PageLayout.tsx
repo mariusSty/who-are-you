@@ -1,5 +1,6 @@
 import { ScrollView, Text, View } from "@/components/Themed";
-import { StyleSheet } from "react-native";
+import Colors from "@/constants/Colors";
+import { StyleSheet, useColorScheme } from "react-native";
 
 type PageLayoutProps = {
   children: React.ReactNode;
@@ -7,12 +8,16 @@ type PageLayoutProps = {
 };
 
 export default function PageLayout({ children, title }: PageLayoutProps) {
+  const theme = useColorScheme() ?? "light";
+
   return (
     <View style={styles.container}>
       <View style={styles.titleContainer}>
         <Text style={styles.titleText}>{title}</Text>
       </View>
-      <View style={styles.separator} />
+      <View
+        style={[styles.separator, { backgroundColor: Colors[theme].text }]}
+      />
       <ScrollView style={styles.contentScrollView}>
         <View style={styles.content}>{children}</View>
       </ScrollView>
@@ -40,7 +45,6 @@ const styles = StyleSheet.create({
   separator: {
     height: 1,
     width: "80%",
-    backgroundColor: "#000",
   },
   contentScrollView: {
     flex: 1,
