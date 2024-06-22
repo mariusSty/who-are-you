@@ -97,549 +97,654 @@ const quizzes: Quiz[] = [
       },
     ],
   },
-  // {
-  //   title: "Harry Potter",
-  //   slug: "harry-potter",
-  //   src: require(`../assets/images/quiz-icon/harry-potter.png`),
-  //   label: "Quel personnage d'Harry Potter es-tu ?",
-  //   description:
-  //     "Découvre quel personnage d'Harry Potter reflète le mieux ta personnalité en répondant à ces questions !",
-  //   questions: [
-  //     {
-  //       id: 1,
-  //       label: "Quel est ton trait de caractère dominant ?",
-  //       answers: ["Courageux", "Intelligent", "Loyal", "Ambitieux"],
-  //     },
-  //     {
-  //       id: 2,
-  //       label: "Quelle matière préfères-tu à Poudlard ?",
-  //       answers: [
-  //         "Défense contre les forces du Mal",
-  //         "Sortilèges",
-  //         "Potions",
-  //         "Soins aux créatures magiques",
-  //       ],
-  //     },
-  //     {
-  //       id: 3,
-  //       label: "Quel est ton passe-temps préféré ?",
-  //       answers: [
-  //         "Lire",
-  //         "Jouer au Quidditch",
-  //         "Explorer",
-  //         "Travailler sur des projets personnels",
-  //       ],
-  //     },
-  //     {
-  //       id: 4,
-  //       label: "Quel type d'amis préfères-tu avoir ?",
-  //       answers: [
-  //         "Des amis courageux",
-  //         "Des amis brillants",
-  //         "Des amis fidèles",
-  //         "Des amis ambitieux",
-  //       ],
-  //     },
-  //   ],
-  //   results: [
-  //     {
-  //       label: "Harry Potter",
-  //       description:
-  //         "Tu es Harry Potter, un sorcier au courage inébranlable. Tu es prêt à tout pour protéger tes amis et affronter les défis. Ton sens de l'aventure et ton désir de justice te définissent.",
-  //     },
-  //     {
-  //       label: "Hermione Granger",
-  //       description:
-  //         "Tu es Hermione Granger, une sorcière dotée d'une intelligence exceptionnelle. Curieuse et déterminée, tu es toujours à la recherche de nouvelles connaissances. Ton courage et ta loyauté envers tes amis te rendent indispensable.",
-  //     },
-  //     {
-  //       label: "Ron Weasley",
-  //       description:
-  //         "Tu es Ron Weasley, un ami loyal et courageux. Toujours prêt à soutenir tes proches, tu es un pilier de confiance. Ta capacité à faire face aux défis avec détermination fait de toi un véritable héros.",
-  //     },
-  //     {
-  //       label: "Draco Malfoy",
-  //       description:
-  //         "Tu es Draco Malfoy, un sorcier ambitieux et déterminé. Prêt à tout pour atteindre tes objectifs, tu fais preuve de courage et de ruse. Ton ambition te pousse à toujours viser plus haut.",
-  //     },
-  //   ],
-  // },
-  // {
-  //   title: "Star Wars",
-  //   slug: "star-wars",
-  //   src: require(`../assets/images/quiz-icon/star-wars.png`),
-  //   label: "Quel personnage de Star Wars es-tu ?",
-  //   description:
-  //     "Découvre quel personnage de Star Wars correspond le mieux à ta personnalité en répondant à ces questions !",
-  //   questions: [
-  //     {
-  //       id: 1,
-  //       label: "Quel est ton trait de caractère principal ?",
-  //       answers: ["Courageux", "Ambitieux", "Loyal", "Rêveur"],
-  //     },
-  //     {
-  //       id: 2,
-  //       label: "Quelle est ta qualité préférée chez un ami ?",
-  //       answers: ["Bravoure", "Ambition", "Fidélité", "Indépendance"],
-  //     },
-  //     {
-  //       id: 3,
-  //       label: "Quel est ton passe-temps préféré ?",
-  //       answers: [
-  //         "Explorer de nouveaux mondes",
-  //         "Développer des stratégies",
-  //         "Aider les autres",
-  //         "Chercher la connaissance",
-  //       ],
-  //     },
-  //     {
-  //       id: 4,
-  //       label: "Quelle est ta plus grande peur ?",
-  //       answers: [
-  //         "Perdre des proches",
-  //         "Échouer dans mes ambitions",
-  //         "Être trahi",
-  //         "Ne pas trouver ma place",
-  //       ],
-  //     },
-  //   ],
-  //   results: [
-  //     {
-  //       label: "Luke Skywalker",
-  //       description:
-  //         "Tu es Luke Skywalker, un Jedi au courage remarquable. Tu es prêt à affronter tous les défis pour protéger ceux que tu aimes. Ta bravoure et ton dévouement font de toi un véritable leader.",
-  //     },
-  //     {
-  //       label: "Dark Vador",
-  //       description:
-  //         "Tu es Dark Vador, un Sith puissant et déterminé. Prêt à tout pour atteindre tes objectifs, tu fais preuve de force et de ruse. Ta volonté inébranlable et ton ambition te définissent.",
-  //     },
-  //     {
-  //       label: "Leia Organa",
-  //       description:
-  //         "Tu es Leia Organa, une leader courageuse et déterminée. Toujours prête à défendre ce en quoi tu crois, tu es un modèle de bravoure et de fidélité. Ton dévouement à tes amis et à ta cause est sans égal.",
-  //     },
-  //     {
-  //       label: "Kylo Ren",
-  //       description:
-  //         "Tu es Kylo Ren, un personnage complexe et ambitieux. Prêt à tout pour atteindre tes fins, tu es à la fois puissant et déterminé. Ton parcours est marqué par une quête incessante de pouvoir et de reconnaissance.",
-  //     },
-  //   ],
-  // },
-  // {
-  //   title: "Animal totem",
-  //   slug: "animal",
-  //   src: require(`../assets/images/quiz-icon/animal.png`),
-  //   label: "Quel animal totem es-tu ?",
-  //   description:
-  //     "Découvre quel animal totem reflète le mieux ta personnalité en répondant à ces questions !",
-  //   questions: [
-  //     {
-  //       id: 1,
-  //       label: "Quelle est ta qualité principale ?",
-  //       answers: ["Courage", "Sagesse", "Force", "Agilité"],
-  //     },
-  //     {
-  //       id: 2,
-  //       label: "Quel environnement préfères-tu ?",
-  //       answers: ["Forêt", "Montagne", "Océan", "Désert"],
-  //     },
-  //     {
-  //       id: 3,
-  //       label: "Quel est ton passe-temps favori ?",
-  //       answers: ["Explorer", "Méditer", "Chasser", "Jouer"],
-  //     },
-  //     {
-  //       id: 4,
-  //       label: "Quel est ton plus grand rêve ?",
-  //       answers: [
-  //         "Aider les autres",
-  //         "Atteindre la paix intérieure",
-  //         "Devenir plus fort",
-  //         "Être libre",
-  //       ],
-  //     },
-  //   ],
-  //   results: [
-  //     {
-  //       label: "Loup",
-  //       description:
-  //         "Tu es le Loup, symbole de courage et de fidélité. Tu es protecteur envers ceux que tu aimes et tu es prêt à affronter les défis avec bravoure. Ton esprit d'équipe et ta loyauté sont inégalés.",
-  //     },
-  //     {
-  //       label: "Aigle",
-  //       description:
-  //         "Tu es l'Aigle, symbole de sagesse et de vision. Tu as une perspective claire de la vie et tu cherches constamment à atteindre de nouveaux sommets. Ta sagesse et ta capacité à voir au-delà des apparences font de toi un guide naturel.",
-  //     },
-  //     {
-  //       label: "Ours",
-  //       description:
-  //         "Tu es l'Ours, symbole de force et de protection. Tu es une figure d'autorité et de respect. Ta force intérieure et ta capacité à protéger ceux qui te sont chers font de toi un leader naturel.",
-  //     },
-  //     {
-  //       label: "Dauphin",
-  //       description:
-  //         "Tu es le Dauphin, symbole d'agilité et de joie. Tu es joueur et sociable, aimant partager des moments de bonheur avec les autres. Ton agilité mentale et physique te permet de t'adapter rapidement à toutes les situations.",
-  //     },
-  //   ],
-  // },
-  // {
-  //   title: "Panneau de signalisation",
-  //   slug: "road-sign",
-  //   src: require(`../assets/images/quiz-icon/road-sign.png`),
-  //   label: "Quel panneau de signalisation es-tu ?",
-  //   description:
-  //     "Découvre quel panneau de signalisation correspond le mieux à ta personnalité en répondant à ces questions !",
-  //   questions: [
-  //     {
-  //       id: 1,
-  //       label: "Comment réagis-tu face à un problème ?",
-  //       answers: [
-  //         "De manière directe",
-  //         "Avec prudence",
-  //         "En avertissant les autres",
-  //         "En posant des règles claires",
-  //       ],
-  //     },
-  //     {
-  //       id: 2,
-  //       label: "Quel environnement préfères-tu ?",
-  //       answers: ["Ville", "Campagne", "Montagne", "Autoroute"],
-  //     },
-  //     {
-  //       id: 3,
-  //       label: "Quelle est ta principale qualité ?",
-  //       answers: ["Clarté", "Patience", "Attention", "Organisation"],
-  //     },
-  //     {
-  //       id: 4,
-  //       label: "Quelle est ta plus grande peur ?",
-  //       answers: [
-  //         "Être ignoré",
-  //         "La précipitation",
-  //         "Le danger",
-  //         "Le désordre",
-  //       ],
-  //     },
-  //   ],
-  //   results: [
-  //     {
-  //       label: "Stop",
-  //       description:
-  //         "Tu es le panneau Stop, direct et autoritaire. Tu sais prendre des décisions claires et tu fais en sorte que les autres respectent les règles. Ta fermeté et ton sens de la sécurité sont essentiels.",
-  //     },
-  //     {
-  //       label: "Cédez le passage",
-  //       description:
-  //         "Tu es le panneau Cédez le passage, prudent et réfléchi. Tu préfères observer avant d'agir et tu valorises la courtoisie. Ton approche mesurée aide à éviter les conflits.",
-  //     },
-  //     {
-  //       label: "Attention travaux",
-  //       description:
-  //         "Tu es le panneau Attention travaux, attentif et prévoyant. Tu mets en garde les autres contre les dangers potentiels et tu es toujours prêt à aider. Ta vigilance est appréciée de tous.",
-  //     },
-  //     {
-  //       label: "Sens interdit",
-  //       description:
-  //         "Tu es le panneau Sens interdit, strict et encadrant. Tu imposes des limites claires et tu fais en sorte que tout soit en ordre. Ta capacité à maintenir la discipline est inestimable.",
-  //     },
-  //   ],
-  // },
-  // {
-  //   title: "Insecte",
-  //   slug: "insect",
-  //   src: require(`../assets/images/quiz-icon/insect.png`),
-  //   label: "Quel insecte es-tu ?",
-  //   description:
-  //     "Découvre quel insecte reflète le mieux ta personnalité en répondant à ces questions !",
-  //   questions: [
-  //     {
-  //       id: 1,
-  //       label: "Quel est ton trait de caractère dominant ?",
-  //       answers: ["Travailleur", "Indépendant", "Social", "Créatif"],
-  //     },
-  //     {
-  //       id: 2,
-  //       label: "Quelle est ta qualité préférée chez un ami ?",
-  //       answers: ["Loyauté", "Liberté", "Esprit d'équipe", "Ingéniosité"],
-  //     },
-  //     {
-  //       id: 3,
-  //       label: "Quel est ton passe-temps favori ?",
-  //       answers: [
-  //         "Travailler sur des projets",
-  //         "Explorer",
-  //         "Passer du temps avec des amis",
-  //         "Créer des choses",
-  //       ],
-  //     },
-  //     {
-  //       id: 4,
-  //       label: "Quelle est ta plus grande peur ?",
-  //       answers: [
-  //         "L'échec",
-  //         "La solitude",
-  //         "Les conflits",
-  //         "Le manque de créativité",
-  //       ],
-  //     },
-  //   ],
-  //   results: [
-  //     {
-  //       label: "Abeille",
-  //       description:
-  //         "Tu es une Abeille, symbole de travail acharné et de communauté. Tu es dévoué à tes tâches et tu travailles bien en équipe. Ton engagement et ta discipline te rendent essentiel.",
-  //     },
-  //     {
-  //       label: "Papillon",
-  //       description:
-  //         "Tu es un Papillon, représentant la liberté et la transformation. Tu apprécies l'exploration et les nouvelles expériences. Ton esprit libre et ta beauté intérieure inspirent les autres.",
-  //     },
-  //     {
-  //       label: "Fourmi",
-  //       description:
-  //         "Tu es une Fourmi, symbole de travail collectif et de persévérance. Tu es organisé et déterminé, toujours prêt à contribuer au succès de ton groupe. Ta discipline et ton dévouement sont admirables.",
-  //     },
-  //     {
-  //       label: "Coccinelle",
-  //       description:
-  //         "Tu es une Coccinelle, porte-bonheur et créativité. Tu es ingénieux et tu apportes de la joie autour de toi. Ta capacité à trouver des solutions créatives aux problèmes est précieuse.",
-  //     },
-  //   ],
-  // },
-  // {
-  //   title: "Dinosaure",
-  //   slug: "dinosaur",
-  //   src: require(`../assets/images/quiz-icon/dinosaur.png`),
-  //   label: "Quel dinosaure es-tu ?",
-  //   description:
-  //     "Découvre quel dinosaure correspond le mieux à ta personnalité en répondant à ces questions !",
-  //   questions: [
-  //     {
-  //       id: 1,
-  //       label: "Quel est ton trait de caractère principal ?",
-  //       answers: ["Puissant", "Rapide", "Intelligent", "Protecteur"],
-  //     },
-  //     {
-  //       id: 2,
-  //       label: "Quel est ton passe-temps favori ?",
-  //       answers: [
-  //         "Explorer",
-  //         "Courir",
-  //         "Résoudre des énigmes",
-  //         "Protéger les autres",
-  //       ],
-  //     },
-  //     {
-  //       id: 3,
-  //       label: "Quelle est ta principale qualité ?",
-  //       answers: ["Force", "Vitesse", "Intelligence", "Loyauté"],
-  //     },
-  //     {
-  //       id: 4,
-  //       label: "Quelle est ta plus grande peur ?",
-  //       answers: ["La faiblesse", "La lenteur", "L'ignorance", "La trahison"],
-  //     },
-  //   ],
-  //   results: [
-  //     {
-  //       label: "Tyrannosaurus Rex",
-  //       description:
-  //         "Tu es le Tyrannosaurus Rex, puissant et dominant. Ta force et ta présence imposante te placent naturellement en position de leader. Ton courage et ta détermination te rendent redoutable.",
-  //     },
-  //     {
-  //       label: "Velociraptor",
-  //       description:
-  //         "Tu es le Velociraptor, rapide et agile. Ton intelligence et ta vitesse te permettent de résoudre des problèmes rapidement et d'agir avec précision. Ta ruse et ton esprit vif te rendent unique.",
-  //     },
-  //     {
-  //       label: "Triceratops",
-  //       description:
-  //         "Tu es le Triceratops, protecteur et loyal. Ta nature défensive et ton attachement à tes proches font de toi un gardien dévoué. Ta loyauté et ta force intérieure sont admirables.",
-  //     },
-  //     {
-  //       label: "Brachiosaurus",
-  //       description:
-  //         "Tu es le Brachiosaurus, majestueux et pacifique. Ta taille imposante et ta nature paisible en font un être respecté. Ta sagesse et ta bienveillance sont appréciées de tous.",
-  //     },
-  //   ],
-  // },
-  // {
-  //   title: "Plante",
-  //   slug: "plant",
-  //   src: require(`../assets/images/quiz-icon/plant.png`),
-  //   label: "Quelle plante es-tu ?",
-  //   description:
-  //     "Découvre quelle plante correspond le mieux à ta personnalité en répondant à ces questions !",
-  //   questions: [
-  //     {
-  //       id: 1,
-  //       label: "Quel environnement préfères-tu ?",
-  //       answers: ["Forêt", "Désert", "Jardin", "Prairie"],
-  //     },
-  //     {
-  //       id: 2,
-  //       label: "Quelle est ta principale qualité ?",
-  //       answers: ["Résilience", "Beauté", "Pragmatisme", "Simplicité"],
-  //     },
-  //     {
-  //       id: 3,
-  //       label: "Comment fais-tu face aux défis ?",
-  //       answers: [
-  //         "Avec détermination",
-  //         "Avec grâce",
-  //         "Avec ingéniosité",
-  //         "Avec calme",
-  //       ],
-  //     },
-  //     {
-  //       id: 4,
-  //       label: "Quelle est ta plus grande aspiration ?",
-  //       answers: [
-  //         "Prospérer",
-  //         "Embellir le monde",
-  //         "Innover",
-  //         "Apporter la paix",
-  //       ],
-  //     },
-  //   ],
-  //   results: [
-  //     {
-  //       label: "Cactus",
-  //       description:
-  //         "Tu es un Cactus, symbole de résilience et de survie. Tu es capable de prospérer dans des conditions difficiles et tu es indépendant. Ta capacité à te protéger et à t'adapter est remarquable.",
-  //     },
-  //     {
-  //       label: "Rose",
-  //       description:
-  //         "Tu es une Rose, symbole de beauté et de passion. Tu apportes de la beauté et de la joie autour de toi, tout en étant capable de te défendre. Ta grâce et ton allure élégante sont admirées.",
-  //     },
-  //     {
-  //       label: "Bambou",
-  //       description:
-  //         "Tu es un Bambou, symbole de pragmatisme et de flexibilité. Tu es adaptable et tu sais te plier sans te briser. Ton approche pratique et ta capacité à croître rapidement te distinguent.",
-  //     },
-  //     {
-  //       label: "Marguerite",
-  //       description:
-  //         "Tu es une Marguerite, symbole de simplicité et de paix. Tu apportes de la joie et de la tranquillité partout où tu vas. Ta nature simple et ta beauté discrète sont apaisantes.",
-  //     },
-  //   ],
-  // },
-  // {
-  //   title: "Ville de France",
-  //   slug: "french-city",
-  //   src: require(`../assets/images/quiz-icon/city.png`),
-  //   label: "Quelle ville de France es-tu ?",
-  //   description:
-  //     "Découvre quelle ville de France correspond le mieux à ta personnalité en répondant à ces questions !",
-  //   questions: [
-  //     {
-  //       id: 1,
-  //       label: "Quel type de paysage préfères-tu ?",
-  //       answers: ["Mer", "Montagne", "Ville", "Campagne"],
-  //     },
-  //     {
-  //       id: 2,
-  //       label: "Quel est ton style de vie idéal ?",
-  //       answers: ["Actif", "Tranquille", "Culturel", "Gastronomique"],
-  //     },
-  //     {
-  //       id: 3,
-  //       label: "Quelle est ta principale qualité ?",
-  //       answers: ["Dynamisme", "Sérénité", "Érudition", "Gourmandise"],
-  //     },
-  //     {
-  //       id: 4,
-  //       label: "Quel est ton loisir préféré ?",
-  //       answers: [
-  //         "Faire du shopping",
-  //         "Randonnée",
-  //         "Visiter des musées",
-  //         "Déguster de la cuisine",
-  //       ],
-  //     },
-  //   ],
-  //   results: [
-  //     {
-  //       label: "Paris",
-  //       description:
-  //         "Tu es Paris, la ville dynamique et cosmopolite. Tu aimes l'effervescence, les activités culturelles et la diversité. Ton énergie et ton amour pour la culture te rendent unique.",
-  //     },
-  //     {
-  //       label: "Annecy",
-  //       description:
-  //         "Tu es Annecy, la ville paisible et pittoresque. Tu apprécies la nature et la tranquillité, et tu te sens chez toi près des montagnes et des lacs. Ta sérénité et ta beauté naturelle sont inspirantes.",
-  //     },
-  //     {
-  //       label: "Lyon",
-  //       description:
-  //         "Tu es Lyon, la ville culturelle et gourmande. Tu combines un riche héritage historique avec une passion pour la gastronomie. Ton savoir-faire et ton goût pour les bonnes choses sont remarquables.",
-  //     },
-  //     {
-  //       label: "Bordeaux",
-  //       description:
-  //         "Tu es Bordeaux, la ville élégante et sophistiquée. Tu apprécies le bon vin, l'architecture élégante et un mode de vie raffiné. Ta classe et ton goût pour les plaisirs de la vie sont exemplaires.",
-  //     },
-  //   ],
-  // },
-  // {
-  //   title: "Boisson chaude",
-  //   slug: "hot-drink",
-  //   src: require(`../assets/images/quiz-icon/hot-drink.png`),
-  //   label: "Quelle boisson chaude es-tu ?",
-  //   description:
-  //     "Découvre quelle boisson chaude correspond le mieux à ta personnalité en répondant à ces questions !",
-  //   questions: [
-  //     {
-  //       id: 1,
-  //       label: "Quel est ton moment préféré de la journée ?",
-  //       answers: ["Matin", "Après-midi", "Soir", "Nuit"],
-  //     },
-  //     {
-  //       id: 2,
-  //       label: "Quelle est ta principale qualité ?",
-  //       answers: ["Énergie", "Calme", "Confort", "Originalité"],
-  //     },
-  //     {
-  //       id: 3,
-  //       label: "Quel est ton lieu idéal pour te détendre ?",
-  //       answers: ["Café", "Salon", "Terrasse", "Parc"],
-  //     },
-  //     {
-  //       id: 4,
-  //       label: "Quel est ton passe-temps favori ?",
-  //       answers: [
-  //         "Lire",
-  //         "Méditer",
-  //         "Discuter avec des amis",
-  //         "Créer quelque chose",
-  //       ],
-  //     },
-  //   ],
-  //   results: [
-  //     {
-  //       label: "Café",
-  //       description:
-  //         "Tu es le Café, énergique et stimulant. Tu aimes commencer ta journée avec dynamisme et tu es toujours prêt à te lancer dans de nouvelles aventures. Ton énergie et ta vivacité sont contagieuses.",
-  //     },
-  //     {
-  //       label: "Thé",
-  //       description:
-  //         "Tu es le Thé, calme et apaisant. Tu apprécies les moments de tranquillité et tu sais prendre le temps de te détendre. Ta capacité à apporter du calme et de la sérénité est précieuse.",
-  //     },
-  //     {
-  //       label: "Chocolat chaud",
-  //       description:
-  //         "Tu es le Chocolat chaud, réconfortant et doux. Tu aimes apporter du confort et du bien-être à ceux qui t'entourent. Ta chaleur et ta douceur font de toi une personne très aimée.",
-  //     },
-  //     {
-  //       label: "Tisane",
-  //       description:
-  //         "Tu es la Tisane, originale et bienveillante. Tu apprécies les moments de détente et tu aimes prendre soin de toi et des autres. Ton côté naturel et attentionné est très apprécié.",
-  //     },
-  //   ],
-  // },
+  {
+    title: "Harry Potter",
+    slug: "harry-potter",
+    src: require(`../assets/images/quiz-icon/harry-potter.png`),
+    label: "Quel personnage de Harry Potter es-tu ?",
+    description:
+      "Découvre quel personnage de l'univers de Harry Potter te correspond le mieux en répondant à ces questions !",
+    questions: [
+      {
+        id: 1,
+        label: "Quel est ton lieu préféré à Poudlard ?",
+        answers: [
+          { label: "La Grande Salle", score: [8, 3, 5, 2] },
+          { label: "La Bibliothèque", score: [1, 9, 4, 6] },
+          { label: "Le Terrain de Quidditch", score: [5, 2, 7, 8] },
+          { label: "La Forêt Interdite", score: [2, 6, 8, 3] },
+        ],
+      },
+      {
+        id: 2,
+        label: "Quelle est ta qualité la plus marquée ?",
+        answers: [
+          { label: "Courage", score: [9, 2, 4, 7] },
+          { label: "Intelligence", score: [2, 9, 6, 5] },
+          { label: "Loyauté", score: [7, 3, 9, 1] },
+          { label: "Ambition", score: [3, 5, 2, 9] },
+        ],
+      },
+      {
+        id: 3,
+        label: "Quel est ton passe-temps favori ?",
+        answers: [
+          { label: "Lire des livres", score: [1, 9, 3, 6] },
+          { label: "Jouer au Quidditch", score: [6, 2, 8, 4] },
+          { label: "Explorer des lieux", score: [8, 4, 7, 2] },
+          { label: "Passer du temps avec des amis", score: [7, 3, 5, 9] },
+        ],
+      },
+      {
+        id: 4,
+        label: "Quelle est ta plus grande peur ?",
+        answers: [
+          { label: "La trahison", score: [4, 7, 9, 2] },
+          { label: "L'échec", score: [5, 2, 6, 8] },
+          { label: "La solitude", score: [7, 3, 2, 9] },
+          { label: "Le manque de pouvoir", score: [3, 6, 1, 8] },
+        ],
+      },
+    ],
+    results: [
+      {
+        label: "Harry Potter",
+        description:
+          "Tu es Harry Potter, le célèbre sorcier à la cicatrice en forme d'éclair. Courageux et déterminé, tu es toujours prêt à te battre pour ceux que tu aimes et pour ce qui est juste. Ton esprit de leader et ta bravoure font de toi un véritable héros.",
+      },
+      {
+        label: "Hermione Granger",
+        description:
+          "Tu es Hermione Granger, la sorcière la plus intelligente de ta génération. Ta soif de connaissance et ton amour pour les livres sont sans égal. Toujours prête à aider tes amis avec des solutions ingénieuses, tu es un pilier de sagesse et de fiabilité.",
+      },
+      {
+        label: "Ron Weasley",
+        description:
+          "Tu es Ron Weasley, le fidèle ami de Harry et Hermione. Loyal et courageux, tu es toujours prêt à soutenir tes amis, même dans les moments les plus difficiles. Ton sens de l'humour et ta capacité à détendre l'atmosphère font de toi un compagnon précieux.",
+      },
+      {
+        label: "Drago Malefoy",
+        description:
+          "Tu es Drago Malefoy, le sorcier ambitieux de Serpentard. Connu pour ton ambition et ta détermination à atteindre tes objectifs, tu n'hésites pas à user de ruse pour arriver à tes fins. Ta volonté de réussir et ta fierté sont tes principales caractéristiques.",
+      },
+    ],
+  },
+  {
+    title: "Star Wars",
+    slug: "star-wars",
+    src: require(`../assets/images/quiz-icon/star-wars.png`),
+    label: "Quel personnage de Star Wars es-tu ?",
+    description:
+      "Découvre quel personnage de l'univers de Star Wars te correspond le mieux en répondant à ces questions !",
+    questions: [
+      {
+        id: 1,
+        label: "Quel est ton lieu préféré dans l'univers de Star Wars ?",
+        answers: [
+          { label: "Tatooine", score: [5, 1, 8, 3] },
+          { label: "Coruscant", score: [2, 9, 6, 5] },
+          { label: "Endor", score: [7, 3, 5, 2] },
+          { label: "Hoth", score: [3, 5, 1, 8] },
+        ],
+      },
+      {
+        id: 2,
+        label: "Quelle est ta plus grande qualité ?",
+        answers: [
+          { label: "Courage", score: [9, 2, 4, 7] },
+          { label: "Sagesse", score: [2, 9, 6, 5] },
+          { label: "Loyauté", score: [7, 3, 9, 1] },
+          { label: "Ambition", score: [3, 5, 2, 9] },
+        ],
+      },
+      {
+        id: 3,
+        label: "Quel est ton passe-temps favori ?",
+        answers: [
+          { label: "Piloter un vaisseau", score: [7, 2, 9, 4] },
+          { label: "Apprendre les arts Jedi", score: [1, 9, 3, 6] },
+          { label: "Explorer la galaxie", score: [8, 4, 7, 2] },
+          { label: "Passer du temps avec des amis", score: [6, 3, 5, 8] },
+        ],
+      },
+      {
+        id: 4,
+        label: "Quelle est ta plus grande peur ?",
+        answers: [
+          { label: "La trahison", score: [4, 7, 9, 2] },
+          { label: "L'échec", score: [5, 2, 6, 8] },
+          { label: "La solitude", score: [7, 3, 2, 9] },
+          { label: "Le manque de pouvoir", score: [3, 6, 1, 8] },
+        ],
+      },
+    ],
+    results: [
+      {
+        label: "Luke Skywalker",
+        description:
+          "Tu es Luke Skywalker, le légendaire Jedi. Courageux et déterminé, tu as un fort sens de la justice et es prêt à tout pour protéger ceux que tu aimes. Ta quête de vérité et ton esprit de leader font de toi un véritable héros de la galaxie.",
+      },
+      {
+        label: "Leia Organa",
+        description:
+          "Tu es Leia Organa, la princesse rebelle. Intelligente et courageuse, tu es une leader née. Ta détermination à lutter pour la liberté et ta capacité à inspirer les autres font de toi une figure emblématique de la Rébellion.",
+      },
+      {
+        label: "Han Solo",
+        description:
+          "Tu es Han Solo, le contrebandier au grand cœur. Malin et indépendant, tu as un esprit aventureux et une attitude décontractée. Ta loyauté envers tes amis et ton courage en font un allié précieux dans n'importe quelle situation.",
+      },
+      {
+        label: "Darth Vader",
+        description:
+          "Tu es Darth Vader, le seigneur Sith. Puissant et déterminé, tu es prêt à tout pour atteindre tes objectifs. Ta maîtrise du côté obscur de la Force et ta présence imposante te rendent aussi redoutable qu'influent.",
+      },
+    ],
+  },
+  {
+    title: "Animal Totem",
+    slug: "animal-totem",
+    src: require(`../assets/images/quiz-icon/animal.png`),
+    label: "Quel est ton animal totem ?",
+    description:
+      "Découvre quel animal totem te correspond le mieux en répondant à ces questions !",
+    questions: [
+      {
+        id: 1,
+        label: "Quel est ton environnement préféré ?",
+        answers: [
+          { label: "Forêt", score: [8, 2, 5, 3] },
+          { label: "Montagne", score: [3, 8, 2, 6] },
+          { label: "Océan", score: [5, 1, 9, 4] },
+          { label: "Désert", score: [2, 6, 4, 8] },
+        ],
+      },
+      {
+        id: 2,
+        label: "Quelle qualité te décrit le mieux ?",
+        answers: [
+          { label: "Courage", score: [9, 3, 2, 7] },
+          { label: "Sagesse", score: [3, 9, 6, 5] },
+          { label: "Loyauté", score: [7, 4, 8, 2] },
+          { label: "Agilité", score: [2, 5, 3, 9] },
+        ],
+      },
+      {
+        id: 3,
+        label: "Quel est ton passe-temps favori ?",
+        answers: [
+          { label: "Explorer la nature", score: [7, 3, 9, 2] },
+          { label: "Méditer", score: [1, 9, 4, 5] },
+          { label: "Nager", score: [6, 2, 8, 3] },
+          { label: "Courir", score: [8, 4, 2, 7] },
+        ],
+      },
+      {
+        id: 4,
+        label: "Quelle est ta plus grande peur ?",
+        answers: [
+          { label: "L'échec", score: [4, 7, 9, 2] },
+          { label: "La trahison", score: [5, 2, 6, 8] },
+          { label: "La solitude", score: [7, 3, 2, 9] },
+          { label: "Le manque de liberté", score: [3, 6, 1, 8] },
+        ],
+      },
+    ],
+    results: [
+      {
+        label: "Loup",
+        description:
+          "Tu es un Loup, un animal totem symbolisant la loyauté et le courage. Tu es un leader naturel et tu valorises fortement la famille et la meute. Ton esprit aventureux et ton instinct de protection font de toi un compagnon loyal et dévoué.",
+      },
+      {
+        label: "Aigle",
+        description:
+          "Tu es un Aigle, un animal totem représentant la sagesse et la vision claire. Tu es capable de voir au-delà des apparences et de comprendre les vérités cachées. Ta perspicacité et ton esprit libre te permettent de naviguer avec sagesse à travers la vie.",
+      },
+      {
+        label: "Dauphin",
+        description:
+          "Tu es un Dauphin, un animal totem symbolisant la joie et la communication. Sociable et intelligent, tu es connu pour ton esprit vif et ta capacité à établir des connexions profondes avec les autres. Ton énergie positive et ton amour pour la vie sont contagieux.",
+      },
+      {
+        label: "Tigre",
+        description:
+          "Tu es un Tigre, un animal totem incarnant la puissance et la volonté. Fort et déterminé, tu es prêt à affronter n'importe quel défi avec courage. Ton indépendance et ta confiance en toi te rendent aussi majestueux qu'intimidant.",
+      },
+    ],
+  },
+  {
+    title: "Panneau de Signalisation",
+    slug: "panneau-signalisation",
+    src: require(`../assets/images/quiz-icon/road-sign.png`),
+    label: "Quel panneau de signalisation es-tu ?",
+    description:
+      "Découvre quel panneau de signalisation te correspond le mieux en répondant à ces questions !",
+    questions: [
+      {
+        id: 1,
+        label: "Quel type d'environnement préfères-tu ?",
+        answers: [
+          { label: "Ville", score: [5, 8, 3, 1] },
+          { label: "Campagne", score: [3, 5, 9, 4] },
+          { label: "Montagne", score: [2, 4, 6, 8] },
+          { label: "Autoroute", score: [8, 2, 5, 7] },
+        ],
+      },
+      {
+        id: 2,
+        label: "Quelle qualité te décrit le mieux ?",
+        answers: [
+          { label: "Prudence", score: [9, 3, 2, 6] },
+          { label: "Clarté", score: [2, 9, 6, 5] },
+          { label: "Directivité", score: [7, 4, 8, 1] },
+          { label: "Informativité", score: [3, 5, 2, 9] },
+        ],
+      },
+      {
+        id: 3,
+        label: "Quel est ton passe-temps favori ?",
+        answers: [
+          { label: "Lire des livres", score: [5, 1, 8, 3] },
+          { label: "Voyager", score: [3, 9, 4, 6] },
+          { label: "Faire du sport", score: [2, 4, 7, 9] },
+          { label: "Socialiser", score: [8, 2, 5, 7] },
+        ],
+      },
+      {
+        id: 4,
+        label: "Quelle est ta plus grande peur ?",
+        answers: [
+          { label: "L'inconnu", score: [4, 7, 9, 2] },
+          { label: "L'ambiguïté", score: [5, 2, 6, 8] },
+          { label: "Le chaos", score: [7, 3, 2, 9] },
+          { label: "Le danger", score: [3, 6, 1, 8] },
+        ],
+      },
+    ],
+    results: [
+      {
+        label: "Stop",
+        description:
+          "Tu es le panneau Stop, symbole de prudence et de clarté. Tu es quelqu'un qui aime s'assurer que tout se passe en toute sécurité et selon les règles. Ta capacité à faire preuve de détermination et à établir des limites claires fait de toi un guide fiable pour les autres.",
+      },
+      {
+        label: "Cédez le passage",
+        description:
+          "Tu es le panneau Cédez le passage, symbole de respect et de diplomatie. Tu sais quand il est temps de laisser la priorité aux autres et de faire preuve de patience. Ton attitude accommodante et ta sagesse en matière de relations font de toi un médiateur précieux.",
+      },
+      {
+        label: "Limite de vitesse",
+        description:
+          "Tu es le panneau Limite de vitesse, symbole de régulation et de modération. Tu sais trouver le juste milieu et établir des rythmes adaptés aux situations. Ta capacité à maintenir l'équilibre et à prévenir les excès est un atout majeur pour ceux qui t'entourent.",
+      },
+      {
+        label: "Sens interdit",
+        description:
+          "Tu es le panneau Sens interdit, symbole d'autorité et de direction. Tu n'hésites pas à indiquer clairement ce qui est permis et ce qui ne l'est pas. Ta fermeté et ta clarté d'esprit permettent d'éviter les erreurs et de maintenir l'ordre.",
+      },
+    ],
+  },
+  {
+    title: "Insecte",
+    slug: "insecte",
+    src: require(`../assets/images/quiz-icon/insect.png`),
+    label: "Quel insecte es-tu ?",
+    description:
+      "Découvre quel insecte te correspond le mieux en répondant à ces questions !",
+    questions: [
+      {
+        id: 1,
+        label: "Quel est ton habitat préféré ?",
+        answers: [
+          { label: "Forêt", score: [8, 2, 5, 3] },
+          { label: "Jardin", score: [3, 8, 2, 6] },
+          { label: "Prairie", score: [5, 1, 9, 4] },
+          { label: "Désert", score: [2, 6, 4, 8] },
+        ],
+      },
+      {
+        id: 2,
+        label: "Quelle qualité te décrit le mieux ?",
+        answers: [
+          { label: "Travailleur", score: [9, 2, 3, 6] },
+          { label: "Adaptable", score: [3, 9, 6, 5] },
+          { label: "Social", score: [7, 4, 8, 1] },
+          { label: "Discret", score: [2, 5, 3, 9] },
+        ],
+      },
+      {
+        id: 3,
+        label: "Quel est ton passe-temps favori ?",
+        answers: [
+          { label: "Explorer la nature", score: [7, 3, 9, 2] },
+          { label: "Travailler sur des projets", score: [1, 9, 4, 5] },
+          { label: "Socialiser", score: [6, 2, 8, 3] },
+          { label: "Se reposer", score: [8, 4, 2, 7] },
+        ],
+      },
+      {
+        id: 4,
+        label: "Quelle est ta plus grande peur ?",
+        answers: [
+          { label: "L'inconnu", score: [4, 7, 9, 2] },
+          { label: "La trahison", score: [5, 2, 6, 8] },
+          { label: "La solitude", score: [7, 3, 2, 9] },
+          { label: "Le danger", score: [3, 6, 1, 8] },
+        ],
+      },
+    ],
+    results: [
+      {
+        label: "Fourmi",
+        description:
+          "Tu es une Fourmi, symbole de travail acharné et de coopération. Tu es connu pour ton esprit d'équipe et ta détermination à accomplir des tâches difficiles. Ton sens de l'organisation et ta capacité à travailler en groupe font de toi un élément précieux.",
+      },
+      {
+        label: "Papillon",
+        description:
+          "Tu es un Papillon, symbole de transformation et de beauté. Tu apportes de la couleur et de la joie partout où tu vas. Ta capacité à évoluer et à t'adapter aux changements est remarquable.",
+      },
+      {
+        label: "Abeille",
+        description:
+          "Tu es une Abeille, symbole de productivité et de socialisation. Tu es toujours occupé à faire quelque chose d'utile. Ta nature sociable et ton dévouement à ta communauté font de toi un insecte indispensable.",
+      },
+      {
+        label: "Scarabée",
+        description:
+          "Tu es un Scarabée, symbole de discrétion et de résilience. Tu sais te faire discret tout en étant capable de surmonter des obstacles importants. Ta persévérance et ta capacité à te fondre dans ton environnement sont tes plus grandes forces.",
+      },
+    ],
+  },
+  {
+    title: "Dinosaure",
+    slug: "dinosaure",
+    src: require(`../assets/images/quiz-icon/dinosaur.png`),
+    label: "Quel dinosaure es-tu ?",
+    description:
+      "Découvre quel dinosaure te correspond le mieux en répondant à ces questions !",
+    questions: [
+      {
+        id: 1,
+        label: "Quel est ton habitat préféré ?",
+        answers: [
+          { label: "Forêt dense", score: [7, 3, 8, 2] },
+          { label: "Plaines ouvertes", score: [5, 8, 2, 6] },
+          { label: "Marécages", score: [4, 1, 9, 3] },
+          { label: "Montagnes", score: [2, 6, 4, 8] },
+        ],
+      },
+      {
+        id: 2,
+        label: "Quelle qualité te décrit le mieux ?",
+        answers: [
+          { label: "Force", score: [9, 2, 4, 7] },
+          { label: "Intelligence", score: [3, 9, 6, 5] },
+          { label: "Vitesse", score: [7, 4, 8, 1] },
+          { label: "Résilience", score: [2, 5, 3, 9] },
+        ],
+      },
+      {
+        id: 3,
+        label: "Quel est ton passe-temps favori ?",
+        answers: [
+          { label: "Explorer", score: [7, 3, 9, 2] },
+          { label: "Chasser", score: [1, 9, 4, 5] },
+          { label: "Courir", score: [6, 2, 8, 3] },
+          { label: "Se reposer", score: [8, 4, 2, 7] },
+        ],
+      },
+      {
+        id: 4,
+        label: "Quelle est ta plus grande peur ?",
+        answers: [
+          { label: "L'extinction", score: [4, 7, 9, 2] },
+          { label: "La trahison", score: [5, 2, 6, 8] },
+          { label: "La solitude", score: [7, 3, 2, 9] },
+          { label: "Le danger", score: [3, 6, 1, 8] },
+        ],
+      },
+    ],
+    results: [
+      {
+        label: "Tyrannosaure Rex",
+        description:
+          "Tu es le Tyrannosaure Rex, le roi des dinosaures. Puissant et redoutable, tu es un prédateur au sommet de la chaîne alimentaire. Ta force et ta détermination te rendent quasiment invincible.",
+      },
+      {
+        label: "Vélociraptor",
+        description:
+          "Tu es un Vélociraptor, symbole d'intelligence et de vitesse. Agile et astucieux, tu es un chasseur redoutable. Ta capacité à travailler en équipe et ton esprit vif font de toi un dinosaure extrêmement efficace.",
+      },
+      {
+        label: "Tricératops",
+        description:
+          "Tu es un Tricératops, symbole de résilience et de défense. Ton caractère pacifique est accompagné d'une capacité impressionnante à te défendre contre les prédateurs. Ta nature protectrice fait de toi un gardien fiable.",
+      },
+      {
+        label: "Brachiosaure",
+        description:
+          "Tu es un Brachiosaure, symbole de grandeur et de calme. Ta grande taille et ta nature herbivore te permettent de dominer les paysages avec tranquillité. Ta patience et ta nature paisible font de toi un dinosaure majestueux.",
+      },
+    ],
+  },
+  {
+    title: "Plante",
+    slug: "plante",
+    src: require(`../assets/images/quiz-icon/plant.png`),
+    label: "Quelle plante es-tu ?",
+    description:
+      "Découvre quelle plante te correspond le mieux en répondant à ces questions !",
+    questions: [
+      {
+        id: 1,
+        label: "Quel est ton environnement préféré ?",
+        answers: [
+          { label: "Forêt", score: [8, 2, 5, 3] },
+          { label: "Jardin", score: [3, 8, 2, 6] },
+          { label: "Prairie", score: [5, 1, 9, 4] },
+          { label: "Désert", score: [2, 6, 4, 8] },
+        ],
+      },
+      {
+        id: 2,
+        label: "Quelle qualité te décrit le mieux ?",
+        answers: [
+          { label: "Résilience", score: [9, 3, 2, 6] },
+          { label: "Beauté", score: [2, 9, 6, 5] },
+          { label: "Adaptabilité", score: [7, 4, 8, 1] },
+          { label: "Simplicité", score: [3, 5, 2, 9] },
+        ],
+      },
+      {
+        id: 3,
+        label: "Quel est ton passe-temps favori ?",
+        answers: [
+          { label: "Jardiner", score: [7, 3, 9, 2] },
+          { label: "Méditer", score: [1, 9, 4, 5] },
+          { label: "Observer la nature", score: [6, 2, 8, 3] },
+          { label: "Lire des livres", score: [8, 4, 2, 7] },
+        ],
+      },
+      {
+        id: 4,
+        label: "Quelle est ta plus grande peur ?",
+        answers: [
+          { label: "Le manque de lumière", score: [4, 7, 9, 2] },
+          { label: "La sécheresse", score: [5, 2, 6, 8] },
+          { label: "Les parasites", score: [7, 3, 2, 9] },
+          { label: "L'abandon", score: [3, 6, 1, 8] },
+        ],
+      },
+    ],
+    results: [
+      {
+        label: "Rose",
+        description:
+          "Tu es une Rose, symbole de beauté et de passion. Tu as une personnalité charmante et magnétique, attirant naturellement les autres vers toi. Ta capacité à fleurir même dans les conditions difficiles montre ta résilience et ta force intérieure.",
+      },
+      {
+        label: "Chêne",
+        description:
+          "Tu es un Chêne, symbole de force et de sagesse. Tu es quelqu'un de solide et fiable, sur qui les autres peuvent toujours compter. Ta présence majestueuse et ta longévité font de toi un pilier dans ta communauté.",
+      },
+      {
+        label: "Tournesol",
+        description:
+          "Tu es un Tournesol, symbole de positivité et de chaleur. Ton énergie rayonnante et ta joie de vivre illuminent la journée de ceux qui t'entourent. Tu es quelqu'un qui cherche toujours la lumière et apporte du bonheur aux autres.",
+      },
+      {
+        label: "Cactus",
+        description:
+          "Tu es un Cactus, symbole de résilience et d'adaptabilité. Tu es capable de prospérer dans des environnements difficiles et de surmonter les défis avec facilité. Ta capacité à conserver de l'énergie et à te protéger des dangers montre ta sagesse et ton instinct de survie.",
+      },
+    ],
+  },
+  {
+    title: "Ville de France",
+    slug: "ville-france",
+    src: require(`../assets/images/quiz-icon/city.png`),
+    label: "Quelle ville de France es-tu ?",
+    description:
+      "Découvre quelle ville de France te correspond le mieux en répondant à ces questions !",
+    questions: [
+      {
+        id: 1,
+        label: "Quel type d'environnement préfères-tu ?",
+        answers: [
+          { label: "Plage", score: [5, 2, 8, 3] },
+          { label: "Montagne", score: [2, 8, 3, 6] },
+          { label: "Campagne", score: [7, 4, 5, 2] },
+          { label: "Ville", score: [8, 3, 2, 9] },
+        ],
+      },
+      {
+        id: 2,
+        label: "Quelle est ta principale qualité ?",
+        answers: [
+          { label: "Élégance", score: [9, 2, 5, 6] },
+          { label: "Chaleur", score: [2, 9, 4, 5] },
+          { label: "Sérénité", score: [7, 4, 8, 2] },
+          { label: "Dynamisme", score: [3, 5, 2, 9] },
+        ],
+      },
+      {
+        id: 3,
+        label: "Quelle activité préfères-tu ?",
+        answers: [
+          { label: "Visiter des musées", score: [9, 3, 5, 2] },
+          { label: "Faire des randonnées", score: [2, 9, 4, 6] },
+          { label: "Aller à la plage", score: [7, 4, 8, 3] },
+          { label: "Faire du shopping", score: [8, 3, 2, 9] },
+        ],
+      },
+      {
+        id: 4,
+        label: "Quel est ton plat préféré ?",
+        answers: [
+          { label: "Croissant", score: [4, 9, 7, 2] },
+          { label: "Bouillabaisse", score: [5, 2, 6, 8] },
+          { label: "Fondue", score: [7, 4, 2, 9] },
+          { label: "Salade niçoise", score: [3, 6, 1, 8] },
+        ],
+      },
+    ],
+    results: [
+      {
+        label: "Paris",
+        description:
+          "Tu es Paris, la ville lumière. Élégant et sophistiqué, tu apprécies la culture, l'art et l'histoire. Ton charme cosmopolite et ton amour pour les belles choses font de toi une personne raffinée et inspirante.",
+      },
+      {
+        label: "Marseille",
+        description:
+          "Tu es Marseille, la cité phocéenne. Chaleureux et dynamique, tu aimes la mer et le soleil. Ta personnalité vibrante et ton esprit convivial font de toi un ami fidèle et accueillant.",
+      },
+      {
+        label: "Lyon",
+        description:
+          "Tu es Lyon, la ville des Lumières. Sérénité et tradition te caractérisent. Tu apprécies la bonne cuisine et les moments de détente en famille. Ton équilibre entre modernité et tradition fait de toi une personne stable et fiable.",
+      },
+      {
+        label: "Nice",
+        description:
+          "Tu es Nice, la perle de la Côte d'Azur. Dynamique et ensoleillé, tu aimes profiter de la vie en bord de mer. Ton énergie positive et ton goût pour les plaisirs simples te rendent unique et attachant.",
+      },
+    ],
+  },
+  {
+    title: "Boisson Chaude",
+    slug: "boisson-chaude",
+    src: require(`../assets/images/quiz-icon/hot-drink.png`),
+    label: "Quelle boisson chaude es-tu ?",
+    description:
+      "Découvre quelle boisson chaude te correspond le mieux en répondant à ces questions !",
+    questions: [
+      {
+        id: 1,
+        label: "Quel est ton moment préféré pour une boisson chaude ?",
+        answers: [
+          { label: "Matin", score: [9, 3, 2, 6] },
+          { label: "Après-midi", score: [2, 9, 4, 5] },
+          { label: "Soir", score: [7, 4, 8, 2] },
+          { label: "Toute la journée", score: [3, 5, 2, 9] },
+        ],
+      },
+      {
+        id: 2,
+        label: "Quelle est ta principale qualité ?",
+        answers: [
+          { label: "Énergie", score: [9, 2, 5, 6] },
+          { label: "Sérénité", score: [2, 9, 4, 5] },
+          { label: "Chaleur", score: [7, 4, 8, 2] },
+          { label: "Confort", score: [3, 5, 2, 9] },
+        ],
+      },
+      {
+        id: 3,
+        label: "Quel est ton passe-temps favori ?",
+        answers: [
+          { label: "Lire un livre", score: [5, 1, 8, 3] },
+          { label: "Faire du sport", score: [2, 8, 4, 6] },
+          { label: "Socialiser avec des amis", score: [7, 4, 5, 2] },
+          { label: "Regarder des films", score: [8, 3, 2, 9] },
+        ],
+      },
+      {
+        id: 4,
+        label: "Quelle saveur préfères-tu ?",
+        answers: [
+          { label: "Amer", score: [9, 2, 6, 3] },
+          { label: "Doux", score: [4, 9, 5, 2] },
+          { label: "Épicé", score: [6, 3, 8, 4] },
+          { label: "Fruité", score: [2, 5, 3, 9] },
+        ],
+      },
+    ],
+    results: [
+      {
+        label: "Café",
+        description:
+          "Tu es le Café, symbole d'énergie et de dynamisme. Tu es toujours prêt à commencer la journée avec une dose de motivation et d'enthousiasme. Ton caractère fort et stimulant fait de toi une personne active et déterminée.",
+      },
+      {
+        label: "Thé",
+        description:
+          "Tu es le Thé, symbole de sérénité et de réflexion. Tu apprécies les moments de calme et de méditation. Ta capacité à apporter du réconfort et de la chaleur fait de toi une personne apaisante et réfléchie.",
+      },
+      {
+        label: "Chocolat Chaud",
+        description:
+          "Tu es le Chocolat Chaud, symbole de confort et de douceur. Tu aimes les moments cosy et les instants partagés avec les êtres chers. Ta nature chaleureuse et réconfortante te rend particulièrement attachant.",
+      },
+      {
+        label: "Infusion",
+        description:
+          "Tu es l'Infusion, symbole de naturel et de bien-être. Tu privilégies les choix sains et équilibrés. Ta capacité à te détendre et à apaiser les autres montre ta sagesse et ton esprit bienveillant.",
+      },
+    ],
+  },
 ];
 
 export default quizzes;
