@@ -44,8 +44,9 @@ export default function Question() {
   };
 
   return (
-    <PageLayout title={question.label}>
+    <PageLayout title={`Question ${id}/${questions.length}`}>
       <View style={styles.answersContainer}>
+        <Text style={styles.question}>{question.label}</Text>
         {question.answers.map((answer, index) => (
           <Button
             key={index}
@@ -68,8 +69,7 @@ const styles = StyleSheet.create({
     gap: 20,
   },
   question: {
-    fontSize: 20,
-    fontWeight: "bold",
+    fontSize: 24,
   },
   answersContainer: {
     gap: 15,
