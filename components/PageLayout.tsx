@@ -1,6 +1,7 @@
 import { ScrollView, Text, View } from "@/components/Themed";
 import Colors from "@/constants/Colors";
 import { StyleSheet, useColorScheme } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 type PageLayoutProps = {
   children: React.ReactNode;
@@ -11,7 +12,9 @@ export default function PageLayout({ children, title }: PageLayoutProps) {
   const theme = useColorScheme() ?? "light";
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView
+      style={[styles.container, { backgroundColor: Colors[theme].background }]}
+    >
       <View style={styles.titleContainer}>
         <Text style={styles.titleText}>{title}</Text>
       </View>
@@ -21,7 +24,7 @@ export default function PageLayout({ children, title }: PageLayoutProps) {
       <ScrollView style={styles.contentScrollView}>
         <View style={styles.content}>{children}</View>
       </ScrollView>
-    </View>
+    </SafeAreaView>
   );
 }
 
@@ -36,7 +39,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     width: "80%",
-    marginTop: 50,
   },
   titleText: {
     fontSize: 30,
@@ -52,7 +54,6 @@ const styles = StyleSheet.create({
   },
   content: {
     paddingHorizontal: 50,
-    paddingBottom: 30,
     gap: 20,
   },
 });

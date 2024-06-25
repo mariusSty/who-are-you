@@ -11,6 +11,7 @@ export interface Question {
 export interface Result {
   label: string;
   description: string;
+  src?: string;
 }
 
 interface Quiz {
@@ -73,6 +74,46 @@ const quizzes: Quiz[] = [
           { label: "Le manque de créativité", score: [9, 8, 6, 5] },
         ],
       },
+      {
+        id: 5,
+        label: "Quel type de nourriture préfères-tu ?",
+        answers: [
+          { label: "Fruits et légumes", score: [4, 2, 5, 1] },
+          { label: "Viande", score: [7, 9, 3, 2] },
+          { label: "Poisson", score: [3, 5, 9, 4] },
+          { label: "Sucreries", score: [8, 1, 2, 7] },
+        ],
+      },
+      {
+        id: 6,
+        label: "Quel est ton style de combat préféré ?",
+        answers: [
+          { label: "Stratégie", score: [6, 7, 8, 3] },
+          { label: "Force brute", score: [9, 5, 2, 4] },
+          { label: "Vitesse et agilité", score: [3, 9, 5, 7] },
+          { label: "Endurance", score: [4, 3, 6, 2] },
+        ],
+      },
+      {
+        id: 7,
+        label: "Quelle activité te relaxe le plus ?",
+        answers: [
+          { label: "Méditer", score: [4, 6, 3, 2] },
+          { label: "Nager", score: [3, 1, 9, 5] },
+          { label: "Marcher en forêt", score: [5, 4, 7, 1] },
+          { label: "Regarder un film", score: [6, 2, 1, 8] },
+        ],
+      },
+      {
+        id: 8,
+        label: "Comment réagis-tu face à un défi ?",
+        answers: [
+          { label: "Je fonce sans hésiter", score: [9, 5, 2, 7] },
+          { label: "Je planifie chaque étape", score: [3, 9, 6, 2] },
+          { label: "Je cherche de l'aide", score: [2, 3, 7, 5] },
+          { label: "Je prends du recul pour réfléchir", score: [4, 6, 5, 1] },
+        ],
+      },
     ],
     results: [
       {
@@ -89,6 +130,7 @@ const quizzes: Quiz[] = [
         label: "Carapuce",
         description:
           "Tu es Carapuce, un Pokémon de type eau. Calme et détendu, tu aimes te relaxer près de l'eau. Ta nature protectrice et ta loyauté envers tes amis font de toi un allié précieux. Tu es toujours prêt à aider et à soutenir ceux qui comptent pour toi.",
+        src: require(`../assets/images/quiz-icon/carapuce.webp`),
       },
       {
         label: "Pikachu",
@@ -143,6 +185,46 @@ const quizzes: Quiz[] = [
           { label: "L'échec", score: [5, 2, 6, 8] },
           { label: "La solitude", score: [7, 3, 2, 9] },
           { label: "Le manque de pouvoir", score: [3, 6, 1, 8] },
+        ],
+      },
+      {
+        id: 5,
+        label: "Quelle matière préfères-tu à Poudlard ?",
+        answers: [
+          { label: "Sortilèges", score: [9, 2, 4, 5] },
+          { label: "Potions", score: [2, 6, 5, 9] },
+          { label: "Défense contre les forces du Mal", score: [8, 3, 7, 4] },
+          { label: "Histoire de la Magie", score: [1, 9, 6, 2] },
+        ],
+      },
+      {
+        id: 6,
+        label: "Quel est ton animal fantastique préféré ?",
+        answers: [
+          { label: "Hippogriffe", score: [8, 4, 7, 3] },
+          { label: "Sombral", score: [3, 6, 8, 9] },
+          { label: "Phoenix", score: [9, 2, 5, 4] },
+          { label: "Niffleur", score: [2, 5, 4, 6] },
+        ],
+      },
+      {
+        id: 7,
+        label: "Comment décrirais-tu ton groupe d'amis ?",
+        answers: [
+          { label: "Soudé et loyal", score: [7, 3, 9, 2] },
+          { label: "Intelligent et studieux", score: [2, 9, 5, 4] },
+          { label: "Aventurier et audacieux", score: [8, 4, 6, 3] },
+          { label: "Ambitieux et déterminé", score: [3, 6, 2, 9] },
+        ],
+      },
+      {
+        id: 8,
+        label: "Quel est ton sortilège préféré ?",
+        answers: [
+          { label: "Expecto Patronum", score: [9, 2, 5, 6] },
+          { label: "Expelliarmus", score: [8, 3, 7, 4] },
+          { label: "Alohomora", score: [2, 5, 4, 9] },
+          { label: "Wingardium Leviosa", score: [3, 6, 9, 2] },
         ],
       },
     ],
