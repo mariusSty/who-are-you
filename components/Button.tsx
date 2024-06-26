@@ -33,7 +33,10 @@ export default function Button({
         style={[
           styles.button,
           style,
-          { backgroundColor: color ?? Colors[theme].tint },
+          {
+            backgroundColor: color ?? Colors[theme].tint,
+            borderColor: Colors[theme].text,
+          },
         ]}
       >
         <Pressable>{children}</Pressable>
@@ -47,7 +50,10 @@ export default function Button({
       style={[
         styles.button,
         style,
-        { backgroundColor: color ?? Colors[theme].tint },
+        {
+          backgroundColor: color ?? Colors[theme].tint,
+          borderColor: Colors[theme].text,
+        },
       ]}
     >
       {children}
