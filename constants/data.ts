@@ -291,12 +291,52 @@ const quizzes: Quiz[] = [
       },
       {
         id: 4,
-        label: "Quelle est ta plus grande peur ?",
+        label: "Quel type de sabre laser préfères-tu ?",
         answers: [
-          { label: "La trahison", score: [4, 7, 9, 2] },
-          { label: "L'échec", score: [5, 2, 6, 8] },
-          { label: "La solitude", score: [7, 3, 2, 9] },
-          { label: "Le manque de pouvoir", score: [3, 6, 1, 8] },
+          { label: "Bleu", score: [9, 3, 5, 2] },
+          { label: "Vert", score: [3, 9, 2, 6] },
+          { label: "Rouge", score: [5, 1, 8, 4] },
+          { label: "Violet", score: [2, 6, 4, 9] },
+        ],
+      },
+      {
+        id: 5,
+        label: "Quel rôle joues-tu dans un groupe ?",
+        answers: [
+          { label: "Leader", score: [9, 2, 4, 7] },
+          { label: "Stratège", score: [2, 9, 6, 5] },
+          { label: "Guerrier", score: [7, 3, 8, 1] },
+          { label: "Médiateur", score: [3, 5, 2, 9] },
+        ],
+      },
+      {
+        id: 6,
+        label: "Quel est ton vaisseau préféré ?",
+        answers: [
+          { label: "X-Wing", score: [8, 3, 5, 2] },
+          { label: "Millennium Falcon", score: [3, 9, 2, 6] },
+          { label: "TIE Fighter", score: [5, 1, 8, 4] },
+          { label: "Star Destroyer", score: [2, 6, 4, 9] },
+        ],
+      },
+      {
+        id: 7,
+        label: "Quelle est ta plus grande ambition ?",
+        answers: [
+          { label: "Ramener l'équilibre dans la Force", score: [9, 3, 2, 7] },
+          { label: "Acquérir du pouvoir", score: [3, 9, 6, 5] },
+          { label: "Protéger les innocents", score: [7, 4, 8, 2] },
+          { label: "Explorer de nouveaux mondes", score: [2, 5, 3, 9] },
+        ],
+      },
+      {
+        id: 8,
+        label: "Quelle est ta philosophie de vie ?",
+        answers: [
+          { label: "Toujours se battre pour le bien", score: [9, 2, 5, 7] },
+          { label: "La connaissance est le pouvoir", score: [3, 9, 6, 4] },
+          { label: "La loyauté avant tout", score: [2, 5, 9, 6] },
+          { label: "Vivre pleinement chaque jour", score: [4, 7, 3, 8] },
         ],
       },
     ],
@@ -371,6 +411,46 @@ const quizzes: Quiz[] = [
           { label: "Le manque de liberté", score: [3, 6, 1, 8] },
         ],
       },
+      {
+        id: 5,
+        label: "Quel est ton type de relation préféré ?",
+        answers: [
+          { label: "Famille proche", score: [9, 3, 2, 7] },
+          { label: "Petit groupe d'amis", score: [3, 9, 6, 5] },
+          { label: "Communauté large", score: [7, 4, 8, 2] },
+          { label: "Relations professionnelles", score: [2, 5, 3, 9] },
+        ],
+      },
+      {
+        id: 6,
+        label: "Comment préfères-tu passer tes vacances ?",
+        answers: [
+          { label: "En randonnée", score: [7, 3, 9, 2] },
+          { label: "Sur une plage", score: [1, 9, 4, 5] },
+          { label: "À explorer des villes", score: [6, 2, 8, 3] },
+          { label: "À la maison", score: [8, 4, 2, 7] },
+        ],
+      },
+      {
+        id: 7,
+        label: "Quelle est ta source d'inspiration ?",
+        answers: [
+          { label: "La nature", score: [9, 3, 2, 7] },
+          { label: "Les livres", score: [3, 9, 6, 5] },
+          { label: "Les arts", score: [7, 4, 8, 2] },
+          { label: "Les personnes autour de moi", score: [2, 5, 3, 9] },
+        ],
+      },
+      {
+        id: 8,
+        label: "Comment gères-tu le stress ?",
+        answers: [
+          { label: "Exercice physique", score: [9, 2, 5, 7] },
+          { label: "Méditation", score: [4, 9, 3, 5] },
+          { label: "Discussions avec des amis", score: [2, 3, 8, 6] },
+          { label: "Écouter de la musique", score: [5, 6, 2, 9] },
+        ],
+      },
     ],
     results: [
       {
@@ -405,16 +485,6 @@ const quizzes: Quiz[] = [
     questions: [
       {
         id: 1,
-        label: "Quel type d'environnement préfères-tu ?",
-        answers: [
-          { label: "Ville", score: [5, 8, 3, 1] },
-          { label: "Campagne", score: [3, 5, 9, 4] },
-          { label: "Montagne", score: [2, 4, 6, 8] },
-          { label: "Autoroute", score: [8, 2, 5, 7] },
-        ],
-      },
-      {
-        id: 2,
         label: "Quelle qualité te décrit le mieux ?",
         answers: [
           { label: "Prudence", score: [9, 3, 2, 6] },
@@ -424,23 +494,73 @@ const quizzes: Quiz[] = [
         ],
       },
       {
-        id: 3,
-        label: "Quel est ton passe-temps favori ?",
-        answers: [
-          { label: "Lire des livres", score: [5, 1, 8, 3] },
-          { label: "Voyager", score: [3, 9, 4, 6] },
-          { label: "Faire du sport", score: [2, 4, 7, 9] },
-          { label: "Socialiser", score: [8, 2, 5, 7] },
-        ],
-      },
-      {
-        id: 4,
+        id: 2,
         label: "Quelle est ta plus grande peur ?",
         answers: [
           { label: "L'inconnu", score: [4, 7, 9, 2] },
           { label: "L'ambiguïté", score: [5, 2, 6, 8] },
           { label: "Le chaos", score: [7, 3, 2, 9] },
           { label: "Le danger", score: [3, 6, 1, 8] },
+        ],
+      },
+      {
+        id: 3,
+        label: "Comment réagis-tu face aux imprévus ?",
+        answers: [
+          { label: "Je m'adapte rapidement", score: [7, 3, 8, 2] },
+          { label: "Je prends le temps de réfléchir", score: [5, 8, 2, 6] },
+          { label: "Je demande de l'aide", score: [4, 1, 9, 3] },
+          { label: "Je préfère éviter les imprévus", score: [2, 6, 4, 8] },
+        ],
+      },
+      {
+        id: 4,
+        label: "Quel type de voyageur es-tu ?",
+        answers: [
+          { label: "Aventurier", score: [8, 3, 2, 7] },
+          { label: "Planificateur", score: [3, 9, 5, 2] },
+          { label: "Explorateur", score: [2, 5, 9, 4] },
+          { label: "Relaxé", score: [6, 2, 4, 8] },
+        ],
+      },
+      {
+        id: 5,
+        label: "Comment préfères-tu communiquer ?",
+        answers: [
+          { label: "Avec des mots clairs et précis", score: [9, 3, 2, 6] },
+          { label: "Avec des images", score: [2, 9, 6, 5] },
+          { label: "Avec des gestes", score: [7, 4, 8, 1] },
+          { label: "Avec des exemples", score: [3, 5, 2, 9] },
+        ],
+      },
+      {
+        id: 6,
+        label: "Quelle est ta priorité sur la route ?",
+        answers: [
+          { label: "La sécurité", score: [9, 2, 3, 6] },
+          { label: "L'efficacité", score: [3, 9, 6, 5] },
+          { label: "Le confort", score: [7, 4, 8, 1] },
+          { label: "La rapidité", score: [2, 5, 3, 9] },
+        ],
+      },
+      {
+        id: 7,
+        label: "Quel est ton rythme de vie ?",
+        answers: [
+          { label: "Rapide et dynamique", score: [8, 3, 5, 2] },
+          { label: "Calme et posé", score: [3, 9, 2, 6] },
+          { label: "Modéré et constant", score: [5, 1, 9, 4] },
+          { label: "Variable selon les situations", score: [2, 6, 4, 8] },
+        ],
+      },
+      {
+        id: 8,
+        label: "Quelle est ta devise ?",
+        answers: [
+          { label: "La sécurité avant tout", score: [9, 3, 2, 6] },
+          { label: "Toujours en mouvement", score: [2, 9, 6, 5] },
+          { label: "Clarté et précision", score: [7, 4, 8, 1] },
+          { label: "Informé, c'est prêt", score: [3, 5, 2, 9] },
         ],
       },
     ],
@@ -515,6 +635,46 @@ const quizzes: Quiz[] = [
           { label: "Le danger", score: [3, 6, 1, 8] },
         ],
       },
+      {
+        id: 5,
+        label: "Quel est ton plat préféré ?",
+        answers: [
+          { label: "Feuilles", score: [8, 3, 5, 2] },
+          { label: "Nectar", score: [3, 9, 2, 6] },
+          { label: "Fruit", score: [5, 1, 9, 4] },
+          { label: "Débris organiques", score: [2, 6, 4, 8] },
+        ],
+      },
+      {
+        id: 6,
+        label: "Quelle est ta stratégie de défense ?",
+        answers: [
+          { label: "Morsure", score: [9, 2, 5, 6] },
+          { label: "Camouflage", score: [2, 9, 4, 5] },
+          { label: "Fuite rapide", score: [7, 4, 8, 1] },
+          { label: "Carapace solide", score: [3, 5, 2, 9] },
+        ],
+      },
+      {
+        id: 7,
+        label: "Quelle est ta méthode de communication ?",
+        answers: [
+          { label: "Phéromones", score: [8, 3, 2, 7] },
+          { label: "Chants", score: [3, 9, 5, 2] },
+          { label: "Danses", score: [2, 5, 9, 4] },
+          { label: "Signaux lumineux", score: [6, 2, 4, 8] },
+        ],
+      },
+      {
+        id: 8,
+        label: "Quel est ton type de climat préféré ?",
+        answers: [
+          { label: "Chaud et humide", score: [7, 3, 2, 9] },
+          { label: "Tempéré", score: [3, 9, 5, 2] },
+          { label: "Sec", score: [2, 5, 9, 4] },
+          { label: "Froid", score: [6, 2, 4, 8] },
+        ],
+      },
     ],
     results: [
       {
@@ -585,6 +745,46 @@ const quizzes: Quiz[] = [
           { label: "La trahison", score: [5, 2, 6, 8] },
           { label: "La solitude", score: [7, 3, 2, 9] },
           { label: "Le danger", score: [3, 6, 1, 8] },
+        ],
+      },
+      {
+        id: 5,
+        label: "Quel est ton plat préféré ?",
+        answers: [
+          { label: "Viande", score: [9, 2, 5, 7] },
+          { label: "Poisson", score: [4, 9, 3, 5] },
+          { label: "Plantes", score: [2, 3, 8, 6] },
+          { label: "Fruits", score: [5, 6, 2, 9] },
+        ],
+      },
+      {
+        id: 6,
+        label: "Quelle est ta stratégie de survie ?",
+        answers: [
+          { label: "Combat", score: [9, 2, 4, 7] },
+          { label: "Fuite", score: [3, 8, 5, 2] },
+          { label: "Camouflage", score: [4, 6, 9, 3] },
+          { label: "Travail en groupe", score: [2, 7, 6, 8] },
+        ],
+      },
+      {
+        id: 7,
+        label: "Quel est ton style de combat ?",
+        answers: [
+          { label: "Corps à corps", score: [9, 3, 4, 6] },
+          { label: "Attaque rapide", score: [3, 8, 5, 2] },
+          { label: "Défense", score: [4, 6, 9, 3] },
+          { label: "Stratégie", score: [2, 7, 6, 8] },
+        ],
+      },
+      {
+        id: 8,
+        label: "Quelle est ta méthode de communication ?",
+        answers: [
+          { label: "Rugissements", score: [9, 2, 5, 7] },
+          { label: "Signaux visuels", score: [4, 9, 3, 5] },
+          { label: "Odeurs", score: [2, 3, 8, 6] },
+          { label: "Mouvements", score: [5, 6, 2, 9] },
         ],
       },
     ],
@@ -659,6 +859,46 @@ const quizzes: Quiz[] = [
           { label: "L'abandon", score: [3, 6, 1, 8] },
         ],
       },
+      {
+        id: 5,
+        label: "Quel type de lumière préfères-tu ?",
+        answers: [
+          { label: "Lumière directe", score: [8, 3, 2, 7] },
+          { label: "Lumière indirecte", score: [3, 8, 5, 2] },
+          { label: "Ombre partielle", score: [5, 1, 9, 4] },
+          { label: "Ombre totale", score: [2, 6, 4, 8] },
+        ],
+      },
+      {
+        id: 6,
+        label: "Quelle est ta saison préférée ?",
+        answers: [
+          { label: "Printemps", score: [9, 3, 5, 2] },
+          { label: "Été", score: [2, 9, 6, 5] },
+          { label: "Automne", score: [4, 7, 8, 3] },
+          { label: "Hiver", score: [3, 5, 2, 9] },
+        ],
+      },
+      {
+        id: 7,
+        label: "Comment te décrivent tes amis ?",
+        answers: [
+          { label: "Fidèle", score: [8, 3, 5, 2] },
+          { label: "Inébranlable", score: [2, 9, 6, 4] },
+          { label: "Rayonnant", score: [5, 2, 8, 7] },
+          { label: "Mystérieux", score: [3, 6, 4, 9] },
+        ],
+      },
+      {
+        id: 8,
+        label: "Quel est ton type de sol préféré ?",
+        answers: [
+          { label: "Sol argileux", score: [8, 3, 2, 7] },
+          { label: "Sol sableux", score: [3, 8, 5, 2] },
+          { label: "Sol limoneux", score: [5, 1, 9, 4] },
+          { label: "Sol rocailleux", score: [2, 6, 4, 8] },
+        ],
+      },
     ],
     results: [
       {
@@ -729,6 +969,46 @@ const quizzes: Quiz[] = [
           { label: "Bouillabaisse", score: [5, 2, 6, 8] },
           { label: "Fondue", score: [7, 4, 2, 9] },
           { label: "Salade niçoise", score: [3, 6, 1, 8] },
+        ],
+      },
+      {
+        id: 5,
+        label: "Quel type de climat préfères-tu ?",
+        answers: [
+          { label: "Ensoleillé", score: [5, 9, 2, 8] },
+          { label: "Tempéré", score: [2, 7, 9, 3] },
+          { label: "Montagneux", score: [3, 8, 6, 4] },
+          { label: "Méditerranéen", score: [8, 3, 4, 5] },
+        ],
+      },
+      {
+        id: 6,
+        label: "Quelle est ta boisson préférée ?",
+        answers: [
+          { label: "Vin", score: [9, 4, 7, 2] },
+          { label: "Pastis", score: [3, 8, 5, 9] },
+          { label: "Limonade", score: [5, 3, 9, 6] },
+          { label: "Café", score: [4, 2, 6, 8] },
+        ],
+      },
+      {
+        id: 7,
+        label: "Quel type de paysage préfères-tu ?",
+        answers: [
+          { label: "Côte rocheuse", score: [3, 7, 2, 9] },
+          { label: "Collines verdoyantes", score: [2, 9, 4, 5] },
+          { label: "Rivières et vallées", score: [5, 2, 8, 4] },
+          { label: "Grandes plaines", score: [9, 3, 7, 6] },
+        ],
+      },
+      {
+        id: 8,
+        label: "Quelle est ton activité du week-end préférée ?",
+        answers: [
+          { label: "Aller au marché", score: [5, 2, 9, 8] },
+          { label: "Visiter des monuments historiques", score: [9, 3, 4, 5] },
+          { label: "Faire du vélo", score: [4, 9, 2, 7] },
+          { label: "Profiter de la plage", score: [3, 6, 5, 2] },
         ],
       },
     ],
@@ -803,6 +1083,46 @@ const quizzes: Quiz[] = [
           { label: "Fruité", score: [2, 5, 3, 9] },
         ],
       },
+      {
+        id: 5,
+        label: "Quelle est ton activité matinale préférée ?",
+        answers: [
+          { label: "Faire du jogging", score: [9, 2, 5, 6] },
+          { label: "Lire les nouvelles", score: [2, 9, 4, 5] },
+          { label: "Méditer", score: [7, 4, 8, 2] },
+          { label: "Préparer un bon petit-déjeuner", score: [3, 5, 2, 9] },
+        ],
+      },
+      {
+        id: 6,
+        label: "Quelle est ta destination de vacances idéale ?",
+        answers: [
+          { label: "Une ville animée", score: [9, 3, 2, 6] },
+          { label: "Une retraite paisible", score: [2, 9, 4, 5] },
+          { label: "Une plage ensoleillée", score: [7, 4, 8, 2] },
+          { label: "Une cabane à la montagne", score: [3, 5, 2, 9] },
+        ],
+      },
+      {
+        id: 7,
+        label: "Quel est ton type de film préféré ?",
+        answers: [
+          { label: "Action", score: [9, 3, 2, 6] },
+          { label: "Comédie", score: [2, 9, 4, 5] },
+          { label: "Drame", score: [7, 4, 8, 2] },
+          { label: "Documentaire", score: [3, 5, 2, 9] },
+        ],
+      },
+      {
+        id: 8,
+        label: "Quel accompagnement préfères-tu avec ta boisson chaude ?",
+        answers: [
+          { label: "Biscuit", score: [9, 3, 2, 6] },
+          { label: "Tarte", score: [2, 9, 4, 5] },
+          { label: "Pain grillé", score: [7, 4, 8, 2] },
+          { label: "Fruits secs", score: [3, 5, 2, 9] },
+        ],
+      },
     ],
     results: [
       {
@@ -813,7 +1133,7 @@ const quizzes: Quiz[] = [
       {
         label: "Thé",
         description:
-          "Tu es le Thé, symbole de sérénité et de réflexion. Tu apprécies les moments de calme et de méditation. Ta capacité à apporter du réconfort et de la chaleur fait de toi une personne apaisante et réfléchie.",
+          "Tu es le Thé, symbole de sérénité et de réflexion. Tu apprécies les moments de calme et de méditation. Ta capacité à apporter du réconfort et de chaleur fait de toi une personne apaisante et réfléchie.",
       },
       {
         label: "Chocolat Chaud",
