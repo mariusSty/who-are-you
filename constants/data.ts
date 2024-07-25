@@ -345,21 +345,25 @@ const quizzes: Quiz[] = [
         label: "Luke Skywalker",
         description:
           "Tu es Luke Skywalker, le légendaire Jedi. Courageux et déterminé, tu as un fort sens de la justice et es prêt à tout pour protéger ceux que tu aimes. Ta quête de vérité et ton esprit de leader font de toi un véritable héros de la galaxie.",
+        src: require(`../assets/images/quiz-results/luke.webp`),
       },
       {
         label: "Leia Organa",
         description:
           "Tu es Leia Organa, la princesse rebelle. Intelligente et courageuse, tu es une leader née. Ta détermination à lutter pour la liberté et ta capacité à inspirer les autres font de toi une figure emblématique de la Rébellion.",
+        src: require(`../assets/images/quiz-results/leia.webp`),
       },
       {
         label: "Han Solo",
         description:
           "Tu es Han Solo, le contrebandier au grand cœur. Malin et indépendant, tu as un esprit aventureux et une attitude décontractée. Ta loyauté envers tes amis et ton courage en font un allié précieux dans n'importe quelle situation.",
+        src: require(`../assets/images/quiz-results/han.webp`),
       },
       {
-        label: "Darth Vader",
+        label: "Dark Vador",
         description:
-          "Tu es Darth Vader, le seigneur Sith. Puissant et déterminé, tu es prêt à tout pour atteindre tes objectifs. Ta maîtrise du côté obscur de la Force et ta présence imposante te rendent aussi redoutable qu'influent.",
+          "Tu es Dark Vador, le seigneur Sith. Puissant et déterminé, tu es prêt à tout pour atteindre tes objectifs. Ta maîtrise du côté obscur de la Force et ta présence imposante te rendent aussi redoutable qu'influent.",
+        src: require(`../assets/images/quiz-results/vador.webp`),
       },
     ],
   },
@@ -375,80 +379,80 @@ const quizzes: Quiz[] = [
         id: 1,
         label: "Quel est ton environnement préféré ?",
         answers: [
-          { label: "Forêt", score: [8, 2, 5, 3] },
-          { label: "Montagne", score: [3, 8, 2, 6] },
-          { label: "Océan", score: [5, 1, 9, 4] },
-          { label: "Désert", score: [2, 6, 4, 8] },
+          { label: "Forêt", score: [8, 2, 5, 3, 7, 6] },
+          { label: "Montagne", score: [3, 8, 2, 6, 5, 9] },
+          { label: "Océan", score: [5, 1, 9, 4, 2, 3] },
+          { label: "Désert", score: [2, 6, 4, 8, 1, 7] },
         ],
       },
       {
         id: 2,
         label: "Quelle qualité te décrit le mieux ?",
         answers: [
-          { label: "Courage", score: [9, 3, 2, 7] },
-          { label: "Sagesse", score: [3, 9, 6, 5] },
-          { label: "Loyauté", score: [7, 4, 8, 2] },
-          { label: "Agilité", score: [2, 5, 3, 9] },
+          { label: "Courage", score: [9, 3, 2, 7, 6, 5] },
+          { label: "Sagesse", score: [3, 9, 6, 5, 2, 8] },
+          { label: "Loyauté", score: [7, 4, 8, 2, 5, 3] },
+          { label: "Agilité", score: [2, 5, 3, 9, 1, 4] },
         ],
       },
       {
         id: 3,
         label: "Quel est ton passe-temps favori ?",
         answers: [
-          { label: "Explorer la nature", score: [7, 3, 9, 2] },
-          { label: "Méditer", score: [1, 9, 4, 5] },
-          { label: "Nager", score: [6, 2, 8, 3] },
-          { label: "Courir", score: [8, 4, 2, 7] },
+          { label: "Explorer la nature", score: [7, 3, 9, 2, 5, 8] },
+          { label: "Méditer", score: [1, 9, 4, 5, 3, 6] },
+          { label: "Nager", score: [6, 2, 8, 3, 1, 4] },
+          { label: "Courir", score: [8, 4, 2, 7, 6, 9] },
         ],
       },
       {
         id: 4,
         label: "Quelle est ta plus grande peur ?",
         answers: [
-          { label: "L'échec", score: [4, 7, 9, 2] },
-          { label: "La trahison", score: [5, 2, 6, 8] },
-          { label: "La solitude", score: [7, 3, 2, 9] },
-          { label: "Le manque de liberté", score: [3, 6, 1, 8] },
+          { label: "L'échec", score: [4, 7, 9, 2, 3, 5] },
+          { label: "La trahison", score: [5, 2, 6, 8, 4, 7] },
+          { label: "La solitude", score: [7, 3, 2, 9, 1, 6] },
+          { label: "Le manque de liberté", score: [3, 6, 1, 8, 2, 5] },
         ],
       },
       {
         id: 5,
         label: "Quel est ton type de relation préféré ?",
         answers: [
-          { label: "Famille proche", score: [9, 3, 2, 7] },
-          { label: "Petit groupe d'amis", score: [3, 9, 6, 5] },
-          { label: "Communauté large", score: [7, 4, 8, 2] },
-          { label: "Relations professionnelles", score: [2, 5, 3, 9] },
+          { label: "Famille proche", score: [9, 3, 2, 7, 6, 4] },
+          { label: "Petit groupe d'amis", score: [3, 9, 6, 5, 4, 8] },
+          { label: "Communauté large", score: [7, 4, 8, 2, 1, 5] },
+          { label: "Relations professionnelles", score: [2, 5, 3, 9, 7, 6] },
         ],
       },
       {
         id: 6,
         label: "Comment préfères-tu passer tes vacances ?",
         answers: [
-          { label: "En randonnée", score: [7, 3, 9, 2] },
-          { label: "Sur une plage", score: [1, 9, 4, 5] },
-          { label: "À explorer des villes", score: [6, 2, 8, 3] },
-          { label: "À la maison", score: [8, 4, 2, 7] },
+          { label: "En randonnée", score: [7, 3, 9, 2, 5, 8] },
+          { label: "Sur une plage", score: [1, 9, 4, 5, 2, 6] },
+          { label: "À explorer des villes", score: [6, 2, 8, 3, 4, 7] },
+          { label: "À la maison", score: [8, 4, 2, 7, 3, 9] },
         ],
       },
       {
         id: 7,
         label: "Quelle est ta source d'inspiration ?",
         answers: [
-          { label: "La nature", score: [9, 3, 2, 7] },
-          { label: "Les livres", score: [3, 9, 6, 5] },
-          { label: "Les arts", score: [7, 4, 8, 2] },
-          { label: "Les personnes autour de moi", score: [2, 5, 3, 9] },
+          { label: "La nature", score: [9, 3, 2, 7, 5, 6] },
+          { label: "Les livres", score: [3, 9, 6, 5, 2, 4] },
+          { label: "Les arts", score: [7, 4, 8, 2, 1, 3] },
+          { label: "Les personnes autour de moi", score: [2, 5, 3, 9, 6, 7] },
         ],
       },
       {
         id: 8,
         label: "Comment gères-tu le stress ?",
         answers: [
-          { label: "Exercice physique", score: [9, 2, 5, 7] },
-          { label: "Méditation", score: [4, 9, 3, 5] },
-          { label: "Discussions avec des amis", score: [2, 3, 8, 6] },
-          { label: "Écouter de la musique", score: [5, 6, 2, 9] },
+          { label: "Exercice physique", score: [9, 2, 5, 7, 3, 6] },
+          { label: "Méditation", score: [4, 9, 3, 5, 7, 2] },
+          { label: "Discussions avec des amis", score: [2, 3, 8, 6, 1, 4] },
+          { label: "Écouter de la musique", score: [5, 6, 2, 9, 4, 7] },
         ],
       },
     ],
@@ -457,21 +461,37 @@ const quizzes: Quiz[] = [
         label: "Loup",
         description:
           "Tu es un Loup, un animal totem symbolisant la loyauté et le courage. Tu es un leader naturel et tu valorises fortement la famille et la meute. Ton esprit aventureux et ton instinct de protection font de toi un compagnon loyal et dévoué.",
+        src: require(`../assets/images/quiz-results/loup.webp`),
       },
       {
         label: "Aigle",
         description:
           "Tu es un Aigle, un animal totem représentant la sagesse et la vision claire. Tu es capable de voir au-delà des apparences et de comprendre les vérités cachées. Ta perspicacité et ton esprit libre te permettent de naviguer avec sagesse à travers la vie.",
+        src: require(`../assets/images/quiz-results/aigle.webp`),
       },
       {
         label: "Dauphin",
         description:
           "Tu es un Dauphin, un animal totem symbolisant la joie et la communication. Sociable et intelligent, tu es connu pour ton esprit vif et ta capacité à établir des connexions profondes avec les autres. Ton énergie positive et ton amour pour la vie sont contagieux.",
+        src: require(`../assets/images/quiz-results/dauphin.webp`),
       },
       {
         label: "Tigre",
         description:
           "Tu es un Tigre, un animal totem incarnant la puissance et la volonté. Fort et déterminé, tu es prêt à affronter n'importe quel défi avec courage. Ton indépendance et ta confiance en toi te rendent aussi majestueux qu'intimidant.",
+        src: require(`../assets/images/quiz-results/tigre.webp`),
+      },
+      {
+        label: "Lion",
+        description:
+          "Tu es un Lion, un animal totem symbolisant la royauté et la force. Charismatique et puissant, tu es né pour diriger et inspirer. Ta bravoure et ta détermination font de toi un leader respecté et admiré.",
+        src: require(`../assets/images/quiz-results/lion.webp`),
+      },
+      {
+        label: "Ours",
+        description:
+          "Tu es un Ours, un animal totem symbolisant la force et la protection. Tu es un gardien naturel, protecteur des tiens et du territoire. Ta patience et ta résilience font de toi une présence rassurante et fiable.",
+        src: require(`../assets/images/quiz-results/ours.webp`),
       },
     ],
   },
@@ -569,21 +589,25 @@ const quizzes: Quiz[] = [
         label: "Stop",
         description:
           "Tu es le panneau Stop, symbole de prudence et de clarté. Tu es quelqu'un qui aime s'assurer que tout se passe en toute sécurité et selon les règles. Ta capacité à faire preuve de détermination et à établir des limites claires fait de toi un guide fiable pour les autres.",
+        src: require(`../assets/images/quiz-results/stop.webp`),
       },
       {
         label: "Cédez le passage",
         description:
           "Tu es le panneau Cédez le passage, symbole de respect et de diplomatie. Tu sais quand il est temps de laisser la priorité aux autres et de faire preuve de patience. Ton attitude accommodante et ta sagesse en matière de relations font de toi un médiateur précieux.",
+        src: require(`../assets/images/quiz-results/cedez.webp`),
       },
       {
         label: "Limite de vitesse",
         description:
           "Tu es le panneau Limite de vitesse, symbole de régulation et de modération. Tu sais trouver le juste milieu et établir des rythmes adaptés aux situations. Ta capacité à maintenir l'équilibre et à prévenir les excès est un atout majeur pour ceux qui t'entourent.",
+        src: require(`../assets/images/quiz-results/limit.webp`),
       },
       {
         label: "Sens interdit",
         description:
           "Tu es le panneau Sens interdit, symbole d'autorité et de direction. Tu n'hésites pas à indiquer clairement ce qui est permis et ce qui ne l'est pas. Ta fermeté et ta clarté d'esprit permettent d'éviter les erreurs et de maintenir l'ordre.",
+        src: require(`../assets/images/quiz-results/sens.webp`),
       },
     ],
   },
@@ -681,21 +705,25 @@ const quizzes: Quiz[] = [
         label: "Fourmi",
         description:
           "Tu es une Fourmi, symbole de travail acharné et de coopération. Tu es connu pour ton esprit d'équipe et ta détermination à accomplir des tâches difficiles. Ton sens de l'organisation et ta capacité à travailler en groupe font de toi un élément précieux.",
+        src: require(`../assets/images/quiz-results/fourmi.webp`),
       },
       {
         label: "Papillon",
         description:
           "Tu es un Papillon, symbole de transformation et de beauté. Tu apportes de la couleur et de la joie partout où tu vas. Ta capacité à évoluer et à t'adapter aux changements est remarquable.",
+        src: require(`../assets/images/quiz-results/papillon.webp`),
       },
       {
         label: "Abeille",
         description:
           "Tu es une Abeille, symbole de productivité et de socialisation. Tu es toujours occupé à faire quelque chose d'utile. Ta nature sociable et ton dévouement à ta communauté font de toi un insecte indispensable.",
+        src: require(`../assets/images/quiz-results/abeille.webp`),
       },
       {
         label: "Scarabée",
         description:
           "Tu es un Scarabée, symbole de discrétion et de résilience. Tu sais te faire discret tout en étant capable de surmonter des obstacles importants. Ta persévérance et ta capacité à te fondre dans ton environnement sont tes plus grandes forces.",
+        src: require(`../assets/images/quiz-results/scarabee.webp`),
       },
     ],
   },
@@ -793,21 +821,25 @@ const quizzes: Quiz[] = [
         label: "Tyrannosaure Rex",
         description:
           "Tu es le Tyrannosaure Rex, le roi des dinosaures. Puissant et redoutable, tu es un prédateur au sommet de la chaîne alimentaire. Ta force et ta détermination te rendent quasiment invincible.",
+        src: require(`../assets/images/quiz-results/tyrannosaurus.webp`),
       },
       {
         label: "Vélociraptor",
         description:
           "Tu es un Vélociraptor, symbole d'intelligence et de vitesse. Agile et astucieux, tu es un chasseur redoutable. Ta capacité à travailler en équipe et ton esprit vif font de toi un dinosaure extrêmement efficace.",
+        src: require(`../assets/images/quiz-results/velociraptor.webp`),
       },
       {
         label: "Tricératops",
         description:
           "Tu es un Tricératops, symbole de résilience et de défense. Ton caractère pacifique est accompagné d'une capacité impressionnante à te défendre contre les prédateurs. Ta nature protectrice fait de toi un gardien fiable.",
+        src: require(`../assets/images/quiz-results/triceraptos.webp`),
       },
       {
         label: "Brachiosaure",
         description:
           "Tu es un Brachiosaure, symbole de grandeur et de calme. Ta grande taille et ta nature herbivore te permettent de dominer les paysages avec tranquillité. Ta patience et ta nature paisible font de toi un dinosaure majestueux.",
+        src: require(`../assets/images/quiz-results/bracchiosaure.webp`),
       },
     ],
   },
@@ -905,21 +937,25 @@ const quizzes: Quiz[] = [
         label: "Rose",
         description:
           "Tu es une Rose, symbole de beauté et de passion. Tu as une personnalité charmante et magnétique, attirant naturellement les autres vers toi. Ta capacité à fleurir même dans les conditions difficiles montre ta résilience et ta force intérieure.",
+        src: require(`../assets/images/quiz-results/rose.webp`),
       },
       {
         label: "Chêne",
         description:
           "Tu es un Chêne, symbole de force et de sagesse. Tu es quelqu'un de solide et fiable, sur qui les autres peuvent toujours compter. Ta présence majestueuse et ta longévité font de toi un pilier dans ta communauté.",
+        src: require(`../assets/images/quiz-results/chene.webp`),
       },
       {
         label: "Tournesol",
         description:
           "Tu es un Tournesol, symbole de positivité et de chaleur. Ton énergie rayonnante et ta joie de vivre illuminent la journée de ceux qui t'entourent. Tu es quelqu'un qui cherche toujours la lumière et apporte du bonheur aux autres.",
+        src: require(`../assets/images/quiz-results/tournesol.webp`),
       },
       {
         label: "Cactus",
         description:
           "Tu es un Cactus, symbole de résilience et d'adaptabilité. Tu es capable de prospérer dans des environnements difficiles et de surmonter les défis avec facilité. Ta capacité à conserver de l'énergie et à te protéger des dangers montre ta sagesse et ton instinct de survie.",
+        src: require(`../assets/images/quiz-results/cactus.webp`),
       },
     ],
   },
@@ -1017,21 +1053,25 @@ const quizzes: Quiz[] = [
         label: "Paris",
         description:
           "Tu es Paris, la ville lumière. Élégant et sophistiqué, tu apprécies la culture, l'art et l'histoire. Ton charme cosmopolite et ton amour pour les belles choses font de toi une personne raffinée et inspirante.",
+        src: require(`../assets/images/quiz-results/paris.webp`),
       },
       {
         label: "Marseille",
         description:
           "Tu es Marseille, la cité phocéenne. Chaleureux et dynamique, tu aimes la mer et le soleil. Ta personnalité vibrante et ton esprit convivial font de toi un ami fidèle et accueillant.",
+        src: require(`../assets/images/quiz-results/marseille.webp`),
       },
       {
         label: "Lyon",
         description:
           "Tu es Lyon, la ville des Lumières. Sérénité et tradition te caractérisent. Tu apprécies la bonne cuisine et les moments de détente en famille. Ton équilibre entre modernité et tradition fait de toi une personne stable et fiable.",
+        src: require(`../assets/images/quiz-results/lyon.webp`),
       },
       {
         label: "Nice",
         description:
           "Tu es Nice, la perle de la Côte d'Azur. Dynamique et ensoleillé, tu aimes profiter de la vie en bord de mer. Ton énergie positive et ton goût pour les plaisirs simples te rendent unique et attachant.",
+        src: require(`../assets/images/quiz-results/nice.webp`),
       },
     ],
   },
@@ -1129,21 +1169,25 @@ const quizzes: Quiz[] = [
         label: "Café",
         description:
           "Tu es le Café, symbole d'énergie et de dynamisme. Tu es toujours prêt à commencer la journée avec une dose de motivation et d'enthousiasme. Ton caractère fort et stimulant fait de toi une personne active et déterminée.",
+        src: require(`../assets/images/quiz-results/coffee.webp`),
       },
       {
         label: "Thé",
         description:
           "Tu es le Thé, symbole de sérénité et de réflexion. Tu apprécies les moments de calme et de méditation. Ta capacité à apporter du réconfort et de chaleur fait de toi une personne apaisante et réfléchie.",
+        src: require(`../assets/images/quiz-results/tea.webp`),
       },
       {
         label: "Chocolat Chaud",
         description:
           "Tu es le Chocolat Chaud, symbole de confort et de douceur. Tu aimes les moments cosy et les instants partagés avec les êtres chers. Ta nature chaleureuse et réconfortante te rend particulièrement attachant.",
+        src: require(`../assets/images/quiz-results/chocolat.webp`),
       },
       {
         label: "Infusion",
         description:
           "Tu es l'Infusion, symbole de naturel et de bien-être. Tu privilégies les choix sains et équilibrés. Ta capacité à te détendre et à apaiser les autres montre ta sagesse et ton esprit bienveillant.",
+        src: require(`../assets/images/quiz-results/infusion.webp`),
       },
     ],
   },
