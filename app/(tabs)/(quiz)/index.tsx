@@ -1,10 +1,6 @@
 import PageLayout from "@/components/PageLayout";
 import quizDatas, { type Category } from "@/constants/data";
-import {
-  CATEGORY_ICONS,
-  groupByCategory,
-  QUIZ_ICONS,
-} from "@/lib/quiz-utils";
+import { CATEGORY_ICONS, groupByCategory, QUIZ_ICONS } from "@/lib/quiz-utils";
 import { Ionicons } from "@expo/vector-icons";
 import { Link } from "expo-router";
 import { Accordion, Button, Chip, useThemeColor } from "heroui-native";
@@ -14,10 +10,7 @@ const grouped = groupByCategory(quizDatas);
 const categories = Object.keys(grouped) as Category[];
 
 export default function Quiz() {
-  const [themeColorAccent, themeColorMuted] = useThemeColor([
-    "accent",
-    "muted",
-  ]);
+  const [themeColorAccent] = useThemeColor(["accent"]);
 
   return (
     <PageLayout title="Quiz">
@@ -29,7 +22,7 @@ export default function Quiz() {
                 <Ionicons
                   name={CATEGORY_ICONS[category]}
                   size={18}
-                  colorClassName="accent-accent"
+                  color={themeColorAccent}
                 />
                 <Text className="text-foreground text-base font-semibold flex-1">
                   {category}
@@ -53,11 +46,7 @@ export default function Quiz() {
                       <Button.Label className="flex-1 text-left">
                         {quizData.title}
                       </Button.Label>
-                      <Ionicons
-                        name="chevron-forward"
-                        size={14}
-                        color={themeColorMuted}
-                      />
+                      <Ionicons name="chevron-forward" size={14} />
                     </Button>
                   </Link>
                 ))}

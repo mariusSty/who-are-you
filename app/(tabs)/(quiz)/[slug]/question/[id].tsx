@@ -10,8 +10,6 @@ import * as SecureStore from "expo-secure-store";
 import { Button } from "heroui-native";
 import { Text, View } from "react-native";
 
-const answerVariants = ["primary", "secondary", "tertiary", "outline"] as const;
-
 export default function Question() {
   const { slug, id, result } = useLocalSearchParams();
 
@@ -51,7 +49,7 @@ export default function Question() {
           <Button
             key={index}
             onPress={() => handleClickAnswer(index)}
-            variant={answerVariants[index % answerVariants.length]}
+            variant="secondary"
           >
             {answer.label}
           </Button>

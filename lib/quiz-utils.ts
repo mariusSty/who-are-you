@@ -1,5 +1,5 @@
-import type { Ionicons } from "@expo/vector-icons";
 import quizDatas, { type Category } from "@/constants/data";
+import type { Ionicons } from "@expo/vector-icons";
 
 export type QuizData = (typeof quizDatas)[number];
 
