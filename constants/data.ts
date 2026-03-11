@@ -11,13 +11,19 @@ export interface Question {
 export interface Result {
   label: string;
   description: string;
-  src?: string;
 }
+
+export type Category =
+  | "Jeux Vidéo"
+  | "Cinéma"
+  | "Nature"
+  | "Insolite"
+  | "Géographie";
 
 interface Quiz {
   title: string;
   slug: string;
-  src: string;
+  category: Category;
   label: string;
   description: string;
   questions: Question[];
@@ -29,7 +35,7 @@ const quizzes: Quiz[] = [
   {
     title: "Pokemon",
     slug: "pokemon",
-    src: require(`../assets/images/quiz-icon/pokemon.png`),
+    category: "Jeux Vidéo",
     label: "Quel Pokémon es-tu ?",
     description:
       "Découvre quel Pokémon correspond le mieux à ta personnalité en répondant à ces questions !",
@@ -130,7 +136,6 @@ const quizzes: Quiz[] = [
         label: "Carapuce",
         description:
           "Tu es Carapuce, un Pokémon de type eau. Calme et détendu, tu aimes te relaxer près de l'eau. Ta nature protectrice et ta loyauté envers tes amis font de toi un allié précieux. Tu es toujours prêt à aider et à soutenir ceux qui comptent pour toi.",
-        src: require(`../assets/images/quiz-icon/carapuce.webp`),
       },
       {
         label: "Pikachu",
@@ -142,7 +147,7 @@ const quizzes: Quiz[] = [
   {
     title: "Harry Potter",
     slug: "harry-potter",
-    src: require(`../assets/images/quiz-icon/harry-potter.png`),
+    category: "Cinéma",
     label: "Quel personnage de Harry Potter es-tu ?",
     description:
       "Découvre quel personnage de l'univers de Harry Potter te correspond le mieux en répondant à ces questions !",
@@ -254,7 +259,7 @@ const quizzes: Quiz[] = [
   {
     title: "Star Wars",
     slug: "star-wars",
-    src: require(`../assets/images/quiz-icon/star-wars.png`),
+    category: "Cinéma",
     label: "Quel personnage de Star Wars es-tu ?",
     description:
       "Découvre quel personnage de l'univers de Star Wars te correspond le mieux en répondant à ces questions !",
@@ -366,7 +371,7 @@ const quizzes: Quiz[] = [
   {
     title: "Animal Totem",
     slug: "animal-totem",
-    src: require(`../assets/images/quiz-icon/animal.png`),
+    category: "Nature",
     label: "Quel est ton animal totem ?",
     description:
       "Découvre quel animal totem te correspond le mieux en répondant à ces questions !",
@@ -488,7 +493,7 @@ const quizzes: Quiz[] = [
   {
     title: "Panneau de Signalisation",
     slug: "panneau-signalisation",
-    src: require(`../assets/images/quiz-icon/road-sign.png`),
+    category: "Insolite",
     label: "Quel panneau de signalisation es-tu ?",
     description:
       "Découvre quel panneau de signalisation te correspond le mieux en répondant à ces questions !",
@@ -600,7 +605,7 @@ const quizzes: Quiz[] = [
   {
     title: "Insecte",
     slug: "insecte",
-    src: require(`../assets/images/quiz-icon/insect.png`),
+    category: "Nature",
     label: "Quel insecte es-tu ?",
     description:
       "Découvre quel insecte te correspond le mieux en répondant à ces questions !",
@@ -712,7 +717,7 @@ const quizzes: Quiz[] = [
   {
     title: "Dinosaure",
     slug: "dinosaure",
-    src: require(`../assets/images/quiz-icon/dinosaur.png`),
+    category: "Nature",
     label: "Quel dinosaure es-tu ?",
     description:
       "Découvre quel dinosaure te correspond le mieux en répondant à ces questions !",
@@ -824,7 +829,7 @@ const quizzes: Quiz[] = [
   {
     title: "Plante",
     slug: "plante",
-    src: require(`../assets/images/quiz-icon/plant.png`),
+    category: "Nature",
     label: "Quelle plante es-tu ?",
     description:
       "Découvre quelle plante te correspond le mieux en répondant à ces questions !",
@@ -936,7 +941,7 @@ const quizzes: Quiz[] = [
   {
     title: "Ville de France",
     slug: "ville-france",
-    src: require(`../assets/images/quiz-icon/city.png`),
+    category: "Géographie",
     label: "Quelle ville de France es-tu ?",
     description:
       "Découvre quelle ville de France te correspond le mieux en répondant à ces questions !",
@@ -1048,7 +1053,7 @@ const quizzes: Quiz[] = [
   {
     title: "Boisson Chaude",
     slug: "boisson-chaude",
-    src: require(`../assets/images/quiz-icon/hot-drink.png`),
+    category: "Insolite",
     label: "Quelle boisson chaude es-tu ?",
     description:
       "Découvre quelle boisson chaude te correspond le mieux en répondant à ces questions !",

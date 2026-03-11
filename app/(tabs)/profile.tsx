@@ -1,7 +1,6 @@
 import PageLayout from "@/components/PageLayout";
 import Colors, { pastelColors } from "@/constants/Colors";
 import quizDatas from "@/constants/data";
-import { Image } from "expo-image";
 import { useFocusEffect } from "expo-router";
 import * as SecureStore from "expo-secure-store";
 import { useCallback, useState } from "react";
@@ -49,7 +48,6 @@ export default function Profile() {
               { borderColor: Colors.text },
             ]}
           >
-            <Image style={styles.quizResultImage} source={quizData.src} />
             <Text style={styles.quizResultItemTitleText}>{quizData.title}</Text>
           </View>
           <View style={styles.quizResultItemTextContainer}>
@@ -83,10 +81,6 @@ const styles = StyleSheet.create({
     borderBottomLeftRadius: 10,
     paddingHorizontal: 10,
     gap: 6,
-  },
-  quizResultImage: {
-    width: 40,
-    height: 40,
   },
   quizResultItemTextContainer: {
     padding: 10,

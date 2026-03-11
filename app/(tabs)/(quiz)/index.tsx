@@ -2,7 +2,6 @@ import Button from "@/components/Button";
 import PageLayout from "@/components/PageLayout";
 import { pastelColors } from "@/constants/Colors";
 import quizDatas from "@/constants/data";
-import { Image } from "expo-image";
 import { StyleSheet, Text, View } from "react-native";
 
 export default function Quiz() {
@@ -15,7 +14,6 @@ export default function Quiz() {
           color={pastelColors[0]}
         >
           <View style={styles.button}>
-            <Image style={{ width: 40, height: 40 }} source={quizData.src} />
             <Text style={styles.quizButtonText}>{quizData.title}</Text>
           </View>
         </Button>
@@ -27,7 +25,6 @@ export default function Quiz() {
 const styles = StyleSheet.create({
   quizButtonText: {
     fontSize: 18,
-    fontWeight: "bold",
     flexWrap: "wrap",
     flex: 1,
   },

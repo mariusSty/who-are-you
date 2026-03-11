@@ -2,7 +2,6 @@ import Button from "@/components/Button";
 import PageLayout from "@/components/PageLayout";
 import { pastelColors } from "@/constants/Colors";
 import { getQuizResultBySlug } from "@/lib/quiz";
-import { Image } from "expo-image";
 import { Redirect, useLocalSearchParams } from "expo-router";
 import { StyleSheet, Text, View } from "react-native";
 
@@ -20,13 +19,6 @@ export default function Result() {
   return (
     <PageLayout title={quizResult.label}>
       <View style={styles.descriptionContainer}>
-        {quizResult.src && (
-          <Image
-            alt={quizResult.label}
-            source={quizResult.src}
-            style={styles.descriptionImage}
-          />
-        )}
         <Text style={styles.descriptionText}>{quizResult.description}</Text>
       </View>
       <Button link="/" color={pastelColors[0]}>
@@ -44,11 +36,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     gap: 24,
-  },
-  descriptionImage: {
-    width: 150,
-    height: 150,
-    borderRadius: 75,
   },
   descriptionText: {
     fontSize: 16,
