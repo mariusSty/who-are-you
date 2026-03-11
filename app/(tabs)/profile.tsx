@@ -1,10 +1,10 @@
 import PageLayout from "@/components/PageLayout";
-import Colors, { pastelColors } from "@/constants/Colors";
 import quizDatas from "@/constants/data";
 import { useFocusEffect } from "expo-router";
 import * as SecureStore from "expo-secure-store";
+import { Card, Chip, Spinner } from "heroui-native";
 import { useCallback, useState } from "react";
-import { ActivityIndicator, StyleSheet, Text, View } from "react-native";
+import { View } from "react-native";
 
 export default function Profile() {
   const [quizResults, setQuizResults] = useState<
@@ -31,68 +31,34 @@ export default function Profile() {
   if (isLoading)
     return (
       <PageLayout title="Profil">
-        <ActivityIndicator />
+        <View className="items-center py-8">
+          <Spinner size="lg" />
+        </View>
       </PageLayout>
     );
 
   return (
     <PageLayout title="Profil">
-      {quizDatas.map((quizData) => (
-        <View
-          key={quizData.slug}
-          style={[styles.quizResultItem, { borderColor: Colors.text }]}
-        >
-          <View
-            style={[
-              styles.quizResultItemCategory,
-              { borderColor: Colors.text },
-            ]}
-          >
-            <Text style={styles.quizResultItemTitleText}>{quizData.title}</Text>
-          </View>
-          <View style={styles.quizResultItemTextContainer}>
-            <Text style={styles.quizResultItemResultText}>
-              {quizResults.find((result) => result.slug === quizData.slug)
-                ?.result || "???"}
-            </Text>
-          </View>
-        </View>
-      ))}
+      {quizDatas.map((quizData) => {
+        const resultText =
+          quizResults.find((r) => r.slug === quizData.slug)?.result || "???";
+
+        return (
+          <Card key={quizData.slug}>
+            <Card.Body className="gap-3">
+              <View className="flex-row items-center justify-between">
+                <Card.Title>{quizData.title}</Card.Title>
+                <Chip size="sm" variant="secondary" color="default">
+                  {quizData.category}
+                </Chip>
+              </View>
+              <Card.Description className="text-lg font-bold text-foreground">
+                {resultText}
+              </Card.Description>
+            </Card.Body>
+          </Card>
+        );
+      })}
     </PageLayout>
   );
 }
-
-const styles = StyleSheet.create({
-  quizResultItem: {
-    flexDirection: "row",
-    borderWidth: 1,
-    borderRadius: 10,
-    alignItems: "center",
-    height: 120,
-  },
-  quizResultItemCategory: {
-    backgroundColor: pastelColors[3],
-    justifyContent: "center",
-    alignItems: "center",
-    width: 120,
-    borderRightWidth: 1,
-    height: "100%",
-    borderTopLeftRadius: 10,
-    borderBottomLeftRadius: 10,
-    paddingHorizontal: 10,
-    gap: 6,
-  },
-  quizResultItemTextContainer: {
-    padding: 10,
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  quizResultItemTitleText: {
-    fontSize: 12,
-  },
-  quizResultItemResultText: {
-    fontSize: 18,
-    fontWeight: "900",
-  },
-});

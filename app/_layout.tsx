@@ -1,10 +1,11 @@
-import { DefaultTheme, ThemeProvider } from "@react-navigation/native";
 import { Stack } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
 import { useEffect } from "react";
 import "react-native-reanimated";
+import "../global.css";
 
-import Colors from "@/constants/Colors";
+import { HeroUINativeProvider } from "heroui-native";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 
 export {
@@ -25,17 +26,16 @@ export default function RootLayout() {
 
 function RootLayoutNav() {
   return (
-    <SafeAreaProvider>
-      <ThemeProvider value={DefaultTheme}>
-        <SafeAreaView
-          edges={["top", "right", "left"]}
-          style={{ flex: 1, backgroundColor: Colors.background }}
-        >
-          <Stack>
-            <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-          </Stack>
-        </SafeAreaView>
-      </ThemeProvider>
-    </SafeAreaProvider>
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <HeroUINativeProvider>
+        <SafeAreaProvider>
+          <SafeAreaView style={{ flex: 1 }} edges={["top", "right", "left"]}>
+            <Stack screenOptions={{ headerShown: false }}>
+              <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+            </Stack>
+          </SafeAreaView>
+        </SafeAreaProvider>
+      </HeroUINativeProvider>
+    </GestureHandlerRootView>
   );
 }

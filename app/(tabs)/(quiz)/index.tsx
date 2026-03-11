@@ -1,38 +1,34 @@
-import Button from "@/components/Button";
 import PageLayout from "@/components/PageLayout";
-import { pastelColors } from "@/constants/Colors";
 import quizDatas from "@/constants/data";
-import { StyleSheet, Text, View } from "react-native";
+import { Ionicons } from "@expo/vector-icons";
+import { Link } from "expo-router";
+import { Card, Chip, useThemeColor } from "heroui-native";
+import { Pressable } from "react-native";
 
 export default function Quiz() {
+  const themeColorAccentForeground = useThemeColor("accent-foreground");
+
   return (
     <PageLayout title="Quiz">
       {quizDatas.map((quizData) => (
-        <Button
-          key={quizData.slug}
-          link={`/${quizData.slug}`}
-          color={pastelColors[0]}
-        >
-          <View style={styles.button}>
-            <Text style={styles.quizButtonText}>{quizData.title}</Text>
-          </View>
-        </Button>
+        <Link key={quizData.slug} asChild href={`/${quizData.slug}`}>
+          <Pressable>
+            <Card>
+              <Card.Body className="flex-row items-center gap-4 py-4">
+                <Ionicons
+                  name="book-outline"
+                  size={22}
+                  color={themeColorAccentForeground}
+                />
+                <Card.Title className="flex-1">{quizData.title}</Card.Title>
+                <Chip size="sm" variant="secondary" color="default">
+                  {quizData.category}
+                </Chip>
+              </Card.Body>
+            </Card>
+          </Pressable>
+        </Link>
       ))}
     </PageLayout>
   );
 }
-
-const styles = StyleSheet.create({
-  quizButtonText: {
-    fontSize: 18,
-    flexWrap: "wrap",
-    flex: 1,
-  },
-  button: {
-    backgroundColor: "transparent",
-    flexDirection: "row",
-    gap: 20,
-    paddingHorizontal: 20,
-    alignItems: "center",
-  },
-});

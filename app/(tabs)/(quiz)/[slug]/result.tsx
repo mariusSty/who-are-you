@@ -1,9 +1,7 @@
-import Button from "@/components/Button";
 import PageLayout from "@/components/PageLayout";
-import { pastelColors } from "@/constants/Colors";
 import { getQuizResultBySlug } from "@/lib/quiz";
-import { Redirect, useLocalSearchParams } from "expo-router";
-import { StyleSheet, Text, View } from "react-native";
+import { Link, Redirect, useLocalSearchParams } from "expo-router";
+import { Button, Card } from "heroui-native";
 
 export default function Result() {
   const { slug, result } = useLocalSearchParams();
@@ -18,26 +16,19 @@ export default function Result() {
 
   return (
     <PageLayout title={quizResult.label}>
-      <View style={styles.descriptionContainer}>
-        <Text style={styles.descriptionText}>{quizResult.description}</Text>
-      </View>
-      <Button link="/" color={pastelColors[0]}>
-        <Text>Faire un autre test</Text>
-      </Button>
-      <Button link="/profile" color={pastelColors[3]}>
-        <Text>Voir votre profil</Text>
-      </Button>
+      <Card>
+        <Card.Body>
+          <Card.Description className="text-base">
+            {quizResult.description}
+          </Card.Description>
+        </Card.Body>
+      </Card>
+      <Link asChild href="/">
+        <Button variant="primary">Faire un autre test</Button>
+      </Link>
+      <Link asChild href="/profile">
+        <Button variant="secondary">Voir votre profil</Button>
+      </Link>
     </PageLayout>
   );
 }
-
-const styles = StyleSheet.create({
-  descriptionContainer: {
-    alignItems: "center",
-    justifyContent: "center",
-    gap: 24,
-  },
-  descriptionText: {
-    fontSize: 16,
-  },
-});

@@ -1,8 +1,7 @@
-import Button from "@/components/Button";
 import PageLayout from "@/components/PageLayout";
 import quizDatas from "@/constants/data";
-import { Redirect, useLocalSearchParams } from "expo-router";
-import { StyleSheet, Text } from "react-native";
+import { Link, Redirect, useLocalSearchParams } from "expo-router";
+import { Button, Card } from "heroui-native";
 
 export default function Slug() {
   const { slug } = useLocalSearchParams();
@@ -14,21 +13,18 @@ export default function Slug() {
 
   return (
     <PageLayout title={quiz.title}>
-      <Text style={styles.description}>{quiz.description}</Text>
-      <Button link={`/${slug}/question/1`}>
-        <Text style={styles.startButtonText}>Commencer le test</Text>
-      </Button>
+      <Card>
+        <Card.Body>
+          <Card.Description className="text-base text-center">
+            {quiz.description}
+          </Card.Description>
+        </Card.Body>
+      </Card>
+      <Link asChild href={`/${slug}/question/1`}>
+        <Button variant="primary" size="lg">
+          Commencer le test
+        </Button>
+      </Link>
     </PageLayout>
   );
 }
-
-const styles = StyleSheet.create({
-  description: {
-    fontSize: 16,
-    textAlign: "center",
-  },
-  startButtonText: {
-    fontSize: 18,
-    fontWeight: "bold",
-  },
-});

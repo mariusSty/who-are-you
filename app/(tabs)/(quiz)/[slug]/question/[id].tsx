@@ -1,6 +1,4 @@
-import Button from "@/components/Button";
 import PageLayout from "@/components/PageLayout";
-import { pastelColors } from "@/constants/Colors";
 import {
   calculateQuizResult,
   getQuestionById,
@@ -9,7 +7,10 @@ import {
 } from "@/lib/quiz";
 import { Redirect, router, useLocalSearchParams } from "expo-router";
 import * as SecureStore from "expo-secure-store";
-import { StyleSheet, Text, View } from "react-native";
+import { Button } from "heroui-native";
+import { Text, View } from "react-native";
+
+const answerVariants = ["primary", "secondary", "tertiary", "outline"] as const;
 
 export default function Question() {
   const { slug, id, result } = useLocalSearchParams();
@@ -44,29 +45,18 @@ export default function Question() {
 
   return (
     <PageLayout title={`Question ${id}/${questions.length}`}>
-      <View style={styles.answersContainer}>
-        <Text style={styles.question}>{question.label}</Text>
+      <View className="gap-4 items-stretch justify-center">
+        <Text className="text-2xl text-foreground">{question.label}</Text>
         {question.answers.map((answer, index) => (
           <Button
             key={index}
             onPress={() => handleClickAnswer(index)}
-            color={pastelColors[index]}
+            variant={answerVariants[index % answerVariants.length]}
           >
-            <Text>{answer.label}</Text>
+            {answer.label}
           </Button>
         ))}
       </View>
     </PageLayout>
   );
 }
-
-const styles = StyleSheet.create({
-  question: {
-    fontSize: 24,
-  },
-  answersContainer: {
-    gap: 15,
-    alignItems: "stretch",
-    justifyContent: "center",
-  },
-});
