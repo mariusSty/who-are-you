@@ -1,16 +1,6 @@
-import FontAwesome from "@expo/vector-icons/FontAwesome";
-import { Tabs } from "expo-router";
-import React from "react";
-
 import { pastelColors } from "@/constants/Colors";
-
-// You can explore the built-in icon families and icons on the web at https://icons.expo.fyi/
-function TabBarIcon(props: {
-  name: React.ComponentProps<typeof FontAwesome>["name"];
-  color: string;
-}) {
-  return <FontAwesome size={28} style={{ marginBottom: -3 }} {...props} />;
-}
+import { Tabs } from "expo-router";
+import { BookOpen, User } from "lucide-react-native";
 
 export default function TabLayout() {
   return (
@@ -23,7 +13,7 @@ export default function TabLayout() {
       <Tabs.Screen
         name="(quiz)"
         options={{
-          tabBarIcon: ({ color }) => <TabBarIcon name="book" color={color} />,
+          tabBarIcon: ({ color }) => <BookOpen size={26} color={color} />,
           tabBarActiveTintColor: pastelColors[0],
         }}
       />
@@ -31,7 +21,7 @@ export default function TabLayout() {
         name="profile"
         options={{
           title: "Profil",
-          tabBarIcon: ({ color }) => <TabBarIcon name="user" color={color} />,
+          tabBarIcon: ({ color }) => <User size={26} color={color} />,
           tabBarActiveTintColor: pastelColors[3],
         }}
       />

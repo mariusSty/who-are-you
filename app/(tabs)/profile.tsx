@@ -1,24 +1,20 @@
 import PageLayout from "@/components/PageLayout";
-import { Text, View } from "@/components/Themed";
 import Colors, { pastelColors } from "@/constants/Colors";
 import quizDatas from "@/constants/data";
 import { Image } from "expo-image";
 import { useFocusEffect } from "expo-router";
 import * as SecureStore from "expo-secure-store";
 import { useCallback, useState } from "react";
-import { ActivityIndicator, StyleSheet, useColorScheme } from "react-native";
+import { ActivityIndicator, StyleSheet, Text, View } from "react-native";
 
 export default function Profile() {
   const [quizResults, setQuizResults] = useState<
     Array<{ slug: string; result: string | null }>
   >([]);
   const [isLoading, setIsLoading] = useState(true);
-  const theme = useColorScheme() ?? "light";
 
   useFocusEffect(
     useCallback(() => {
-      let isActive = true;
-
       const getResults = async () => {
         const results: Array<{ slug: string; result: string | null }> = [];
         for (const quiz of quizDatas) {
@@ -30,11 +26,7 @@ export default function Profile() {
       };
 
       getResults();
-
-      return () => {
-        isActive = false;
-      };
-    }, [])
+    }, []),
   );
 
   if (isLoading)
@@ -49,12 +41,12 @@ export default function Profile() {
       {quizDatas.map((quizData) => (
         <View
           key={quizData.slug}
-          style={[styles.quizResultItem, { borderColor: Colors[theme].text }]}
+          style={[styles.quizResultItem, { borderColor: Colors.text }]}
         >
           <View
             style={[
               styles.quizResultItemCategory,
-              { borderColor: Colors[theme].text },
+              { borderColor: Colors.text },
             ]}
           >
             <Image style={styles.quizResultImage} source={quizData.src} />
@@ -107,6 +99,6 @@ const styles = StyleSheet.create({
   },
   quizResultItemResultText: {
     fontSize: 18,
-    fontWeight: "black",
+    fontWeight: "900",
   },
 });

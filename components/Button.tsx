@@ -1,12 +1,6 @@
 import Colors from "@/constants/Colors";
 import { Link } from "expo-router";
-import {
-  Pressable,
-  StyleProp,
-  StyleSheet,
-  useColorScheme,
-  ViewStyle,
-} from "react-native";
+import { Pressable, StyleProp, StyleSheet, ViewStyle } from "react-native";
 
 type ButtonProps = {
   children: React.ReactNode;
@@ -23,23 +17,16 @@ export default function Button({
   style,
   onPress,
 }: ButtonProps) {
-  const theme = useColorScheme() ?? "light";
-
   if (link) {
+    const flatStyle = StyleSheet.flatten([
+      styles.button,
+      style,
+      { backgroundColor: color ?? Colors.tint, borderColor: Colors.text },
+    ]);
+
     return (
-      <Link
-        asChild
-        href={link}
-        style={[
-          styles.button,
-          style,
-          {
-            backgroundColor: color ?? Colors[theme].tint,
-            borderColor: Colors[theme].text,
-          },
-        ]}
-      >
-        <Pressable>{children}</Pressable>
+      <Link asChild href={link}>
+        <Pressable style={flatStyle}>{children}</Pressable>
       </Link>
     );
   }
@@ -51,8 +38,8 @@ export default function Button({
         styles.button,
         style,
         {
-          backgroundColor: color ?? Colors[theme].tint,
-          borderColor: Colors[theme].text,
+          backgroundColor: color ?? Colors.tint,
+          borderColor: Colors.text,
         },
       ]}
     >

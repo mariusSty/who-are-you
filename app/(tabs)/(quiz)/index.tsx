@@ -1,10 +1,9 @@
 import Button from "@/components/Button";
 import PageLayout from "@/components/PageLayout";
-import { Text, View } from "@/components/Themed";
 import { pastelColors } from "@/constants/Colors";
 import quizDatas from "@/constants/data";
 import { Image } from "expo-image";
-import { StyleSheet } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 
 export default function Quiz() {
   return (

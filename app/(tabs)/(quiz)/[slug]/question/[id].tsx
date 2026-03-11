@@ -1,6 +1,5 @@
 import Button from "@/components/Button";
 import PageLayout from "@/components/PageLayout";
-import { Text, View } from "@/components/Themed";
 import { pastelColors } from "@/constants/Colors";
 import {
   calculateQuizResult,
@@ -10,7 +9,7 @@ import {
 } from "@/lib/quiz";
 import { Redirect, router, useLocalSearchParams } from "expo-router";
 import * as SecureStore from "expo-secure-store";
-import { StyleSheet } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 
 export default function Question() {
   const { slug, id, result } = useLocalSearchParams();
@@ -26,7 +25,7 @@ export default function Question() {
     if (questions.length === +id && result) {
       const scores = getScore(
         slug.toString(),
-        result.toString().concat(`,${index}`)
+        result.toString().concat(`,${index}`),
       );
       const quizResults =
         calculateQuizResult(slug?.toString() || "", scores)?.label || "";
@@ -62,12 +61,6 @@ export default function Question() {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-    gap: 20,
-  },
   question: {
     fontSize: 24,
   },

@@ -1,17 +1,16 @@
 import Button from "@/components/Button";
 import PageLayout from "@/components/PageLayout";
-import { Text, View } from "@/components/Themed";
 import { pastelColors } from "@/constants/Colors";
 import { getQuizResultBySlug } from "@/lib/quiz";
 import { Image } from "expo-image";
 import { Redirect, useLocalSearchParams } from "expo-router";
-import { StyleSheet } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 
 export default function Result() {
   const { slug, result } = useLocalSearchParams();
   const quizResult = getQuizResultBySlug(
     slug?.toString() || "",
-    result?.toString() || ""
+    result?.toString() || "",
   );
 
   if (!result || !quizResult) {
