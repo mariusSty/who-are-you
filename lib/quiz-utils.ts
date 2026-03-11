@@ -22,6 +22,7 @@ export const CATEGORY_ICONS: Record<
   Nature: "leaf",
   Insolite: "sparkles",
   Géographie: "earth",
+  Custom: "create-outline",
 };
 
 export const QUIZ_ICONS: Record<

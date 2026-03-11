@@ -14,6 +14,12 @@ export default function Quiz() {
 
   return (
     <PageLayout title="Quiz">
+      <Link asChild href="/create">
+        <Button variant="primary">
+          <Ionicons name="add-circle-outline" size={20} color="white" />
+          <Button.Label>Créer un quiz</Button.Label>
+        </Button>
+      </Link>
       <Accordion selectionMode="multiple" variant="surface">
         {categories.map((category) => (
           <Accordion.Item key={category} value={category}>

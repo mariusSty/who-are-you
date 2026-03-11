@@ -18,13 +18,13 @@ export type Category =
   | "Cinéma"
   | "Nature"
   | "Insolite"
-  | "Géographie";
+  | "Géographie"
+  | "Custom";
 
 interface Quiz {
   title: string;
   slug: string;
   category: Category;
-  label: string;
   description: string;
   questions: Question[];
   results: Result[];
@@ -36,7 +36,6 @@ const quizzes: Quiz[] = [
     title: "Pokemon",
     slug: "pokemon",
     category: "Jeux Vidéo",
-    label: "Quel Pokémon es-tu ?",
     description:
       "Découvre quel Pokémon correspond le mieux à ta personnalité en répondant à ces questions !",
     questions: [
@@ -148,7 +147,6 @@ const quizzes: Quiz[] = [
     title: "Harry Potter",
     slug: "harry-potter",
     category: "Cinéma",
-    label: "Quel personnage de Harry Potter es-tu ?",
     description:
       "Découvre quel personnage de l'univers de Harry Potter te correspond le mieux en répondant à ces questions !",
     questions: [
@@ -260,7 +258,6 @@ const quizzes: Quiz[] = [
     title: "Star Wars",
     slug: "star-wars",
     category: "Cinéma",
-    label: "Quel personnage de Star Wars es-tu ?",
     description:
       "Découvre quel personnage de l'univers de Star Wars te correspond le mieux en répondant à ces questions !",
     questions: [
@@ -372,7 +369,6 @@ const quizzes: Quiz[] = [
     title: "Animal Totem",
     slug: "animal-totem",
     category: "Nature",
-    label: "Quel est ton animal totem ?",
     description:
       "Découvre quel animal totem te correspond le mieux en répondant à ces questions !",
     questions: [
@@ -494,7 +490,6 @@ const quizzes: Quiz[] = [
     title: "Panneau de Signalisation",
     slug: "panneau-signalisation",
     category: "Insolite",
-    label: "Quel panneau de signalisation es-tu ?",
     description:
       "Découvre quel panneau de signalisation te correspond le mieux en répondant à ces questions !",
     questions: [
@@ -606,7 +601,6 @@ const quizzes: Quiz[] = [
     title: "Insecte",
     slug: "insecte",
     category: "Nature",
-    label: "Quel insecte es-tu ?",
     description:
       "Découvre quel insecte te correspond le mieux en répondant à ces questions !",
     questions: [
@@ -718,7 +712,6 @@ const quizzes: Quiz[] = [
     title: "Dinosaure",
     slug: "dinosaure",
     category: "Nature",
-    label: "Quel dinosaure es-tu ?",
     description:
       "Découvre quel dinosaure te correspond le mieux en répondant à ces questions !",
     questions: [
@@ -830,7 +823,6 @@ const quizzes: Quiz[] = [
     title: "Plante",
     slug: "plante",
     category: "Nature",
-    label: "Quelle plante es-tu ?",
     description:
       "Découvre quelle plante te correspond le mieux en répondant à ces questions !",
     questions: [
@@ -942,7 +934,6 @@ const quizzes: Quiz[] = [
     title: "Ville de France",
     slug: "ville-france",
     category: "Géographie",
-    label: "Quelle ville de France es-tu ?",
     description:
       "Découvre quelle ville de France te correspond le mieux en répondant à ces questions !",
     questions: [
@@ -1054,7 +1045,6 @@ const quizzes: Quiz[] = [
     title: "Boisson Chaude",
     slug: "boisson-chaude",
     category: "Insolite",
-    label: "Quelle boisson chaude es-tu ?",
     description:
       "Découvre quelle boisson chaude te correspond le mieux en répondant à ces questions !",
     questions: [
