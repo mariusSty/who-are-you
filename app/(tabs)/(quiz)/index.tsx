@@ -1,34 +1,71 @@
 import PageLayout from "@/components/PageLayout";
-import quizDatas from "@/constants/data";
+import quizDatas, { type Category } from "@/constants/data";
+import {
+  CATEGORY_ICONS,
+  groupByCategory,
+  QUIZ_ICONS,
+} from "@/lib/quiz-utils";
 import { Ionicons } from "@expo/vector-icons";
 import { Link } from "expo-router";
-import { Card, Chip, useThemeColor } from "heroui-native";
-import { Pressable } from "react-native";
+import { Accordion, Button, Chip, useThemeColor } from "heroui-native";
+import { Text, View } from "react-native";
+
+const grouped = groupByCategory(quizDatas);
+const categories = Object.keys(grouped) as Category[];
 
 export default function Quiz() {
-  const themeColorAccentForeground = useThemeColor("accent-foreground");
+  const [themeColorAccent, themeColorMuted] = useThemeColor([
+    "accent",
+    "muted",
+  ]);
 
   return (
     <PageLayout title="Quiz">
-      {quizDatas.map((quizData) => (
-        <Link key={quizData.slug} asChild href={`/${quizData.slug}`}>
-          <Pressable>
-            <Card>
-              <Card.Body className="flex-row items-center gap-4 py-4">
+      <Accordion selectionMode="multiple" variant="surface">
+        {categories.map((category) => (
+          <Accordion.Item key={category} value={category}>
+            <Accordion.Trigger>
+              <View className="flex-row items-center flex-1 gap-3">
                 <Ionicons
-                  name="book-outline"
-                  size={22}
-                  color={themeColorAccentForeground}
+                  name={CATEGORY_ICONS[category]}
+                  size={18}
+                  colorClassName="accent-accent"
                 />
-                <Card.Title className="flex-1">{quizData.title}</Card.Title>
-                <Chip size="sm" variant="secondary" color="default">
-                  {quizData.category}
+                <Text className="text-foreground text-base font-semibold flex-1">
+                  {category}
+                </Text>
+                <Chip size="sm" variant="primary">
+                  {grouped[category].length}
                 </Chip>
-              </Card.Body>
-            </Card>
-          </Pressable>
-        </Link>
-      ))}
+              </View>
+              <Accordion.Indicator />
+            </Accordion.Trigger>
+            <Accordion.Content>
+              <View className="gap-2 pb-2">
+                {grouped[category].map((quizData) => (
+                  <Link key={quizData.slug} asChild href={`/${quizData.slug}`}>
+                    <Button variant="secondary" className="justify-start">
+                      <Ionicons
+                        name={QUIZ_ICONS[quizData.slug] ?? "book-outline"}
+                        size={18}
+                        color={themeColorAccent}
+                      />
+                      <Button.Label className="flex-1 text-left">
+                        {quizData.title}
+                      </Button.Label>
+                      <Ionicons
+                        name="chevron-forward"
+                        size={14}
+                        color={themeColorMuted}
+                      />
+                    </Button>
+                  </Link>
+                ))}
+              </View>
+            </Accordion.Content>
+          </Accordion.Item>
+        ))}
+      </Accordion>
     </PageLayout>
   );
 }
