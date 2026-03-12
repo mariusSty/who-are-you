@@ -5,13 +5,14 @@ import {
 } from "@/stores/useQuizCreationStore";
 import { Ionicons } from "@expo/vector-icons";
 import { Link } from "expo-router";
-import { Button, Card, Input, TextArea } from "heroui-native";
+import { Button, Card, Input, TextArea, useThemeColor } from "heroui-native";
 import { Text, View } from "react-native";
 
 const { addResult, removeResult, updateResult } = quizCreationActions;
 
 export default function CreateResults() {
   const results = useQuizCreationStore((s) => s.results);
+  const [themeColorDanger] = useThemeColor(["danger"]);
 
   return (
     <PageLayout title="Résultats">
@@ -28,7 +29,11 @@ export default function CreateResults() {
                 isIconOnly
                 onPress={() => removeResult(rIndex)}
               >
-                <Ionicons name="trash-outline" size={18} color="red" />
+                <Ionicons
+                  name="trash-outline"
+                  size={18}
+                  color={themeColorDanger}
+                />
               </Button>
             )}
           </Card.Header>

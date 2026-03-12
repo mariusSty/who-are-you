@@ -12,6 +12,7 @@ import {
   Input,
   Separator,
   Slider,
+  useThemeColor,
 } from "heroui-native";
 import { useState } from "react";
 import { Text, View } from "react-native";
@@ -31,6 +32,7 @@ const {
 
 export default function CreateQuestions() {
   const router = useRouter();
+  const [themeColorDanger] = useThemeColor(["danger"]);
   const { questions, results } = useQuizCreationStore(
     useShallow((s) => ({ questions: s.questions, results: s.results })),
   );
@@ -86,7 +88,11 @@ export default function CreateQuestions() {
                       isIconOnly
                       onPress={() => removeQuestion(qIndex)}
                     >
-                      <Ionicons name="trash-outline" size={18} color="red" />
+                      <Ionicons
+                        name="trash-outline"
+                        size={18}
+                        color={themeColorDanger}
+                      />
                     </Button>
                   )}
                 </View>
@@ -116,7 +122,7 @@ export default function CreateQuestions() {
                             <Ionicons
                               name="close-circle-outline"
                               size={18}
-                              color="red"
+                              color={themeColorDanger}
                             />
                           </Button>
                         )}

@@ -20,7 +20,10 @@ const grouped = groupByCategory(quizDatas);
 const categories = Object.keys(grouped) as Category[];
 
 export default function Quiz() {
-  const [themeColorAccent] = useThemeColor(["accent"]);
+  const [themeColorAccent, themeColorDanger] = useThemeColor([
+    "accent",
+    "danger",
+  ]);
   const bottomSheetRef = useRef<BottomSheet>(null);
 
   const importedQuizzes = useImportedQuizzesStore(useShallow((s) => s.quizzes));
@@ -113,7 +116,11 @@ export default function Quiz() {
                         isIconOnly
                         onPress={() => handleDelete(id, quiz.title)}
                       >
-                        <Ionicons name="trash-outline" size={16} color="red" />
+                        <Ionicons
+                          name="trash-outline"
+                          size={16}
+                          color={themeColorDanger}
+                        />
                       </Button>
                     </View>
                   ))}

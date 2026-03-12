@@ -2,13 +2,17 @@ import PageLayout from "@/components/PageLayout";
 import { Ionicons } from "@expo/vector-icons";
 import * as Clipboard from "expo-clipboard";
 import { Link, useLocalSearchParams } from "expo-router";
-import { Button, Card } from "heroui-native";
+import { Button, Card, useThemeColor } from "heroui-native";
 import { useState } from "react";
 import { Text, View } from "react-native";
 
 export default function CreateSuccess() {
   const { id } = useLocalSearchParams<{ id: string }>();
   const [copied, setCopied] = useState(false);
+  const [themeColorSuccess, themeColorAccent] = useThemeColor([
+    "success",
+    "accent",
+  ]);
 
   const handleCopy = async () => {
     if (!id) return;
@@ -22,7 +26,11 @@ export default function CreateSuccess() {
       <Card>
         <Card.Body className="items-center gap-4 py-8">
           <View className="bg-primary/10 rounded-full p-4">
-            <Ionicons name="checkmark-circle" size={48} color="#17c964" />
+            <Ionicons
+              name="checkmark-circle"
+              size={48}
+              color={themeColorSuccess}
+            />
           </View>
           <Text className="text-foreground text-lg text-center">
             Partagez ce code pour que d'autres puissent jouer à votre quiz :
@@ -37,7 +45,7 @@ export default function CreateSuccess() {
         <Ionicons
           name={copied ? "checkmark" : "copy-outline"}
           size={20}
-          color="white"
+          color={themeColorAccent}
         />
         <Button.Label>{copied ? "Copié !" : "Copier le code"}</Button.Label>
       </Button>
