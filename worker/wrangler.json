@@ -1,0 +1,12 @@
+{
+  "name": "who-are-you-api",
+  "main": "src/index.ts",
+  "compatibility_date": "2025-03-11",
+  "kv_namespaces": [
+    {
+      "binding": "QUIZ_KV",
+      "id": "d9984278dd194f82ab3f1ed842807b67",
+      "preview_id": "590d3f113b1e48f4accd2fb575637192"
+    }
+  ]
+}

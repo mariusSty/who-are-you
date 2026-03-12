@@ -21,11 +21,13 @@ export default function Question() {
   }
 
   const handleClickAnswer = async (index: number) => {
-    if (questions.length === +id && result) {
-      const scores = getScore(
-        slug.toString(),
-        result.toString().concat(`,${index}`),
-      );
+    const isLastQuestion = questions.length === +id;
+
+    if (isLastQuestion) {
+      const fullResult = result
+        ? result.toString().concat(`,${index}`)
+        : `${index}`;
+      const scores = getScore(slug.toString(), fullResult);
       const quizResults =
         calculateQuizResult(slug?.toString() || "", scores)?.label || "";
       SecureStore.setItem(slug.toString(), quizResults);
@@ -36,7 +38,7 @@ export default function Question() {
     } else {
       router.push({
         pathname: `/${slug}/question/${+id + 1}`,
-        params: { result: result ? result.concat(`,${index}`) : index },
+        params: { result: result ? result.concat(`,${index}`) : `${index}` },
       });
     }
   };

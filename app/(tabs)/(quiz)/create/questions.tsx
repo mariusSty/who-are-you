@@ -37,9 +37,17 @@ export default function CreateQuestions() {
 
   const [openItems, setOpenItems] = useState<string[]>([]);
 
-  const handleSubmit = () => {
-    if (submit()) {
-      router.replace("/");
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleSubmit = async () => {
+    setIsLoading(true);
+    try {
+      const id = await submit();
+      if (id) {
+        router.replace(`/create/success?id=${id}`);
+      }
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -173,7 +181,7 @@ export default function CreateQuestions() {
         <Button
           variant="primary"
           className="flex-1"
-          isDisabled={!isFormValid()}
+          isDisabled={!isFormValid() || isLoading}
           onPress={handleSubmit}
         >
           <Button.Label>Créer le quiz</Button.Label>

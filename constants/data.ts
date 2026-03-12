@@ -21,7 +21,7 @@ export type Category =
   | "Géographie"
   | "Custom";
 
-interface Quiz {
+export interface Quiz {
   title: string;
   slug: string;
   category: Category;

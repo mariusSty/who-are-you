@@ -1,3 +1,4 @@
+import { uploadQuiz } from "@/lib/api";
 import {
   type FormQuestion,
   type FormResult,
@@ -42,7 +43,7 @@ type QuizCreationActions = {
   ) => void;
 
   isFormValid: () => boolean;
-  submit: () => boolean;
+  submit: () => Promise<string | false>;
   reset: () => void;
 };
 
@@ -209,7 +210,7 @@ export const useQuizCreationStore = create<
         return quizSchema.safeParse(quiz).success;
       },
 
-      submit: () => {
+      submit: async () => {
         const s = get();
         const quiz = {
           title: s.title,
@@ -229,10 +230,17 @@ export const useQuizCreationStore = create<
         }
 
         set({ errors: [] });
-        console.log(JSON.stringify(parsed.data, null, 2));
-        Alert.alert("Succès", "Le quiz a été créé ! (voir console)");
-        get().reset();
-        return true;
+
+        try {
+          const { id } = await uploadQuiz(parsed.data);
+          get().reset();
+          return id;
+        } catch (error) {
+          const message =
+            error instanceof Error ? error.message : "Erreur inconnue";
+          Alert.alert("Erreur", message);
+          return false;
+        }
       },
 
       reset: () => set(initialState),

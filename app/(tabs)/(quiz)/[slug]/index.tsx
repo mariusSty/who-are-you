@@ -1,11 +1,11 @@
 import PageLayout from "@/components/PageLayout";
-import quizDatas from "@/constants/data";
+import { findQuiz } from "@/lib/quiz";
 import { Link, Redirect, useLocalSearchParams } from "expo-router";
 import { Button, Card } from "heroui-native";
 
 export default function Slug() {
   const { slug } = useLocalSearchParams();
-  const quiz = quizDatas.find((quiz) => quiz.slug === slug);
+  const quiz = findQuiz(slug?.toString() ?? "");
 
   if (!quiz) {
     return <Redirect href="/" />;
